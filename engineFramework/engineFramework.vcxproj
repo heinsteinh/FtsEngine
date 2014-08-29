@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9962B71B-6598-4208-8419-B42A81F8E2E9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>engineFramework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:/Program Files (x86)/boost/boost_1_55_0;C:\Users\108012516\Documents\Visual Studio 2013\Projects\EventSystem2\EGL\include;D:\glm_0_9_5_3\glm;D:\External Libs\zlib-1.2.8;D:\External Libs\lpng156;D:\External Libs\Lua-5.1.4</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\boost\boost_1_55_0\stage\lib;C:\Users\108012516\Documents\Visual Studio 2013\Projects\EventSystem2\EGL\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Application_TestShaders.h" />
+    <ClInclude Include="BasicShader.h" />
+    <ClInclude Include="cAIAgentTaskMoveTo.h" />
+    <ClInclude Include="CameraController.h" />
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="concurrent_queue.h" />
+    <ClInclude Include="ConfigFile.h" />
+    <ClInclude Include="ConfigSystem.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="eventbridge.h" />
+    <ClInclude Include="eventchannel.h" />
+    <ClInclude Include="EventDelegate.h" />
+    <ClInclude Include="eventhandler.h" />
+    <ClInclude Include="eventhandlerqueue.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GraphicModule\format.h" />
+    <ClInclude Include="GraphicModule\FrameBuffer.h" />
+    <ClInclude Include="GraphicModule\LibHeader.h" />
+    <ClInclude Include="GraphicModule\Mesh.h" />
+    <ClInclude Include="GraphicModule\MeshBuilder.h" />
+    <ClInclude Include="GraphicModule\Objects.h" />
+    <ClInclude Include="GraphicModule\Program.h" />
+    <ClInclude Include="GraphicModule\Renderer.h" />
+    <ClInclude Include="GraphicModule\ResourceManager.h" />
+    <ClInclude Include="GraphicModule\ResourceSystem.h" />
+    <ClInclude Include="GraphicModule\Shader.h" />
+    <ClInclude Include="GraphicModule\ShaderAttribute.h" />
+    <ClInclude Include="GraphicModule\ShaderParameter.h" />
+    <ClInclude Include="GraphicModule\ShaderUtil.h" />
+    <ClInclude Include="GraphicModule\Solids.h" />
+    <ClInclude Include="GraphicModule\Star.h" />
+    <ClInclude Include="GraphicModule\TaskletScheduler.h" />
+    <ClInclude Include="GraphicModule\Uniform.h" />
+    <ClInclude Include="GraphicModule\UniformManager.h" />
+    <ClInclude Include="GraphicModule\Viewport.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Joystick.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Keys.h" />
+    <ClInclude Include="Lib.h" />
+    <ClInclude Include="Libs_old.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="matrix_stack.h" />
+    <ClInclude Include="MovementSystem.h" />
+    <ClInclude Include="Named.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NonCopyable.h" />
+    <ClInclude Include="objects.h" />
+    <ClInclude Include="OpenGLESWindow.h" />
+    <ClInclude Include="PngFile.h" />
+    <ClInclude Include="PoolObject.h" />
+    <ClInclude Include="RenderSystem.h" />
+    <ClInclude Include="RSpline.h" />
+    <ClInclude Include="SceneGraph.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="shader_gl.h" />
+    <ClInclude Include="Signal.h" />
+    <ClInclude Include="SimpleGameState.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteBatch.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="StateMachineTest.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SteeringSystem.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="SystemEntity.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="taskmanager.h" />
+    <ClInclude Include="TestScene.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureWrapper.h" />
+    <ClInclude Include="threadsafe_stack.h" />
+    <ClInclude Include="thread_safe_queue.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TouchCallback.h" />
+    <ClInclude Include="transforms_gl.h" />
+    <ClInclude Include="TSingleton.h" />
+    <ClInclude Include="uniforms.h" />
+    <ClInclude Include="VariableSystem.h" />
+    <ClInclude Include="VideoSystem.h" />
+    <ClInclude Include="WindowEGL.h" />
+    <ClInclude Include="WindowVideo.h" />
+    <ClInclude Include="wrapper_gl.h" />
+    <ClInclude Include="XShape.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Application_TestShaders.cpp" />
+    <ClCompile Include="BasicShader.cpp" />
+    <ClCompile Include="cAIAgentTaskMoveTo.cpp" />
+    <ClCompile Include="CameraController.cpp" />
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="ConfigFile.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="engineFramework.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GraphicModule\FrameBuffer.cpp" />
+    <ClCompile Include="GraphicModule\Mesh.cpp" />
+    <ClCompile Include="GraphicModule\Program.cpp" />
+    <ClCompile Include="GraphicModule\Renderer.cpp" />
+    <ClCompile Include="GraphicModule\ResourceSystem.cpp" />
+    <ClCompile Include="GraphicModule\Shader.cpp" />
+    <ClCompile Include="GraphicModule\ShaderParameter.cpp" />
+    <ClCompile Include="GraphicModule\ShaderUtil.cpp" />
+    <ClCompile Include="GraphicModule\Solids.cpp" />
+    <ClCompile Include="GraphicModule\Uniform.cpp" />
+    <ClCompile Include="GraphicModule\UniformManager.cpp" />
+    <ClCompile Include="GraphicModule\Viewport.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Joystick.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="matrix_stack.cpp" />
+    <ClCompile Include="MovementSystem.cpp" />
+    <ClCompile Include="Named.cpp" />
+    <ClCompile Include="OpenGLESWindow.cpp" />
+    <ClCompile Include="PngFile.cpp" />
+    <ClCompile Include="PoolObject.cpp" />
+    <ClCompile Include="RenderSystem.cpp" />
+    <ClCompile Include="RSpline.cpp" />
+    <ClCompile Include="SceneGraph.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
+    <ClCompile Include="shader_gl.cpp" />
+    <ClCompile Include="SimpleGameState.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteBatch.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="StateMachineTest.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SteeringSystem.cpp" />
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="SystemEntity.cpp" />
+    <ClCompile Include="task.cpp" />
+    <ClCompile Include="taskmanager.cpp" />
+    <ClCompile Include="TestScene.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureWrapper.cpp" />
+    <ClCompile Include="TouchCallback.cpp" />
+    <ClCompile Include="transforms_gl.cpp" />
+    <ClCompile Include="uniforms.cpp" />
+    <ClCompile Include="VariableSystem.cpp" />
+    <ClCompile Include="VideoSystem.cpp" />
+    <ClCompile Include="WindowEGL.cpp" />
+    <ClCompile Include="WindowVideo.cpp" />
+    <ClCompile Include="wrapper_gl.cpp" />
+    <ClCompile Include="XShape.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

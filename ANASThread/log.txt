@@ -1,0 +1,12 @@
+[Apr 14 2014, 12:19:51] c:\users\108012516\documents\visual studio 2013\projects\eventsystem2\anasthread\graphic.cpp:20 ANAS::Graphic::Init **Graphic: Init 
+
+[Apr 14 2014, 12:20:50] c:\users\108012516\documents\visual studio 2013\projects\eventsystem2\anasthread\graphic.cpp:20 ANAS::Graphic::Init **Graphic: Init 
+
+[Apr 14 2014, 12:20:50] c:\users\108012516\documents\visual studio 2013\projects\eventsystem2\anasthread\graphic.cpp:20 ANAS::Graphic::Init **Graphic: Init 
+
+[Apr 14 2014, 12:20:50] c:\users\108012516\documents\visual studio 2013\projects\eventsystem2\anasthread\graphic.cpp:20 ANAS::Graphic::Init **Graphic: Init 
+
+[Apr 14 2014, 12:39:35] c:\users\108012516\documents\visual studio 2013\projects\eventsystem2\anasthread\graphic.cpp:20 ANAS::Graphic::Init **Graphic: Init 
+
+[Apr 14 2014, 12:39:35] c:\users\108012516\documents\visual studio 2013\projects\eventsystem2\anasthread\graphic.cpp:50 ANAS::Graphic::InitTask **EGL Task: Init 
+

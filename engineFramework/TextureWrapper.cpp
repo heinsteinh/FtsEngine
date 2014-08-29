@@ -1,0 +1,74 @@
+#include "stdafx.h"
+#include "TextureWrapper.h"
+
+#include <iostream>
+
+//#include "PngFile.h"
+
+namespace rendering
+{
+
+	CTextureWrapper::CTextureWrapper(const string& name) :mTextureId(-1), mName(name), mDataBuf(NULL)
+	{
+		int components = 0;
+		/*if (CPngFile::load(name.c_str(), &mDataBuf, &mWidth, &mHeight, &components) == false)
+		{
+			return;
+		}*/
+
+
+
+		//https://chromium.googlesource.com/angle/angle/+/testbranchthree/tests/angle_tests/UnpackAlignmentTest.cpp
+		GLenum format;
+	
+		switch (components)
+		{
+		case 1:
+			format = GL_LUMINANCE;
+			break;
+		case 2:
+			format = GL_LUMINANCE_ALPHA;
+			break;
+		case 3:
+			format = GL_RGB;
+			break;
+		case 4:
+			format = GL_RGBA;
+			break;
+		}
+		glGenTextures(1, &mTextureId);
+		glBindTexture(GL_TEXTURE_2D, mTextureId);
+		glTexImage2D(GL_TEXTURE_2D, 0, format, mWidth, mHeight, 0, format, GL_UNSIGNED_BYTE, mDataBuf);
+		//2.0²»Ö§³ÖGL_PERSPECTIVE_CORRECTION_HINT
+		//glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		printf("load texture %s(w:%d,h:%d,id:%d) success\n", name.c_str(), mWidth, mHeight, mTextureId);
+
+
+		/*if (mDataBuf)
+			delete[] mDataBuf;*/
+
+		GL_CHECK
+	}
+
+	CTextureWrapper::~CTextureWrapper(void)
+	{
+		if (mDataBuf)
+		{
+			delete[] mDataBuf;
+		}
+		if (mTextureId>-1)
+		{
+			glDeleteTextures(1, &mTextureId);
+			printf("delete texture %s success\n", mName.c_str());
+		}
+	}
+
+	void CTextureWrapper::bind()
+	{
+		glBindTexture(GL_TEXTURE_2D, mTextureId);
+	}
+}

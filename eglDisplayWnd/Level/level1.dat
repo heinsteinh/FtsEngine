@@ -1,0 +1,1644 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = "ABZ6GAdaNzbQBU7_PXu_PXb8fAJXKDRHcQ:1403098367555";
+ 
+ 
+ var CS_env = {"profileUrl": "/u/112241180151938862863/", "token": "ABZ6GAdaNzbQBU7_PXu_PXb8fAJXKDRHcQ:1403098367555", "projectHomeUrl": "/p/isogame-iphone", "projectName": "isogame-iphone", "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/3374407039186159233", "loggedInUserEmail": "heinsteinh@gmail.com", "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "relativeBaseUrl": "", "domainName": null};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>level1.dat - 
+ isogame-iphone -
+ 
+ 
+ An framework to display an isometric style game level on both windows and iphone - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/3374407039186159233/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/3374407039186159233/css/ph_detail.css" >
+ 
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/3374407039186159233/css/d_sb.css" >
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/3374407039186159233/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ 
+  tr.inline_comment {
+ background: #fff;
+ vertical-align: top;
+ }
+ div.draft, div.published {
+ padding: .3em;
+ border: 1px solid #999; 
+ margin-bottom: .1em;
+ font-family: arial, sans-serif;
+ max-width: 60em;
+ }
+ div.draft {
+ background: #ffa;
+ } 
+ div.published {
+ background: #e5ecf9;
+ }
+ div.published .body, div.draft .body {
+ padding: .5em .1em .1em .1em;
+ max-width: 60em;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ font-size: 1em;
+ }
+ div.draft .actions {
+ margin-left: 1em;
+ font-size: 90%;
+ }
+ div.draft form {
+ padding: .5em .5em .5em 0;
+ }
+ div.draft textarea, div.published textarea {
+ width: 95%;
+ height: 10em;
+ font-family: arial, sans-serif;
+ margin-bottom: .5em;
+ }
+
+ 
+ .nocursor, .nocursor td, .cursor_hidden, .cursor_hidden td {
+ background-color: white;
+ height: 2px;
+ }
+ .cursor, .cursor td {
+ background-color: darkblue;
+ height: 2px;
+ display: '';
+ }
+ 
+ 
+.list {
+ border: 1px solid white;
+ border-bottom: 0;
+}
+
+ 
+ </style>
+</head>
+<body class="t4">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ 
+ <a href="#" id="multilogin-dropdown" onclick="return false;"
+ ><u><b>heinsteinh@gmail.com</b></u> <small>&#9660;</small></a>
+ 
+ 
+ | <a href="/u/112241180151938862863/" id="projects-dropdown" onclick="return false;"
+ ><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="/u/112241180151938862863/" onclick="_CS_click('/gb/ph/profile');"
+ title="Profile, Updates, and Settings"
+ ><u>Profile</u></a>
+ | <a href="https://www.google.com/accounts/Logout?continue=https%3A%2F%2Fcode.google.com%2Fp%2Fisogame-iphone%2Fsource%2Fbrowse%2Ftrunk%2FMedia%2FWorldViewer%2FGameLevels%2Flevel1.dat%3Fr%3D5" 
+ onclick="_CS_click('/gb/ph/signout');"
+ ><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/isogame-iphone">
+ <a href="/p/isogame-iphone/">
+ 
+ <img src="https://ssl.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/isogame-iphone/"><span itemprop="name">isogame-iphone</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/isogame-iphone/"><span itemprop="description">An framework to display an isometric style game level on both windows and iphone</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/isogame-iphone/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="/p/isogame-iphone/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/isogame-iphone/w/list" class="tab ">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/isogame-iphone/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/isogame-iphone/source/checkout"
+ class="tab active">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="subt">
+ <div class="st2">
+ <div class="isf">
+ 
+ 
+
+
+ <span class="inst1"><a href="/p/isogame-iphone/source/checkout">Checkout</a></span> &nbsp;
+ <span class="inst2"><a href="/p/isogame-iphone/source/browse/">Browse</a></span> &nbsp;
+ <span class="inst3"><a href="/p/isogame-iphone/source/list">Changes</a></span> &nbsp;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </form>
+ <script type="text/javascript">
+ 
+ function codesearchQuery(form) {
+ var query = document.getElementById('q').value;
+ if (query) { form.action += '%20' + query; }
+ }
+ </script>
+ </div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+>
+
+ 
+
+
+
+
+<div class="expand">
+<div id="colcontrol">
+<style type="text/css">
+ #file_flipper { white-space: nowrap; padding-right: 2em; }
+ #file_flipper.hidden { display: none; }
+ #file_flipper .pagelink { color: #0000CC; text-decoration: underline; }
+ #file_flipper #visiblefiles { padding-left: 0.5em; padding-right: 0.5em; }
+</style>
+<table id="nav_and_rev" class="list"
+ cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+ 
+ <td nowrap="nowrap" class="src_crumbs src_nav" width="33%">
+ <strong class="src_nav">Source path:&nbsp;</strong>
+ <span id="crumb_root">
+ 
+ <a href="/p/isogame-iphone/source/browse/?r=5">svn</a>/&nbsp;</span>
+ <span id="crumb_links" class="ifClosed"><a href="/p/isogame-iphone/source/browse/trunk/?r=5">trunk</a><span class="sp">/&nbsp;</span><a href="/p/isogame-iphone/source/browse/trunk/Media/?r=5">Media</a><span class="sp">/&nbsp;</span><a href="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/?r=5">WorldViewer</a><span class="sp">/&nbsp;</span><a href="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/?r=5">GameLevels</a><span class="sp">/&nbsp;</span>level1.dat</span>
+ 
+ 
+
+
+ </td>
+ 
+ 
+ <td nowrap="nowrap" width="33%" align="right">
+ <table cellpadding="0" cellspacing="0" style="font-size: 100%"><tr>
+ 
+ 
+ <td class="flipper"><b>r5</b></td>
+ 
+ </tr></table>
+ </td> 
+ </tr>
+</table>
+
+<div class="fc">
+ 
+ 
+ <p><em>
+ 
+ This file is not plain text (only UTF-8 and Latin-1
+ text encodings are currently supported).
+ 
+ </em></p>
+ 
+ 
+ <div id="log">
+ <div style="text-align:right">
+ <a class="ifCollapse" href="#" onclick="_toggleMeta(this); return false">Show details</a>
+ <a class="ifExpand" href="#" onclick="_toggleMeta(this); return false">Hide details</a>
+ </div>
+ <div class="ifExpand">
+ 
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="changelog">
+ <p>Change log</p>
+ <div>
+ <a href="/p/isogame-iphone/source/detail?spec=svn5&amp;r=2">r2</a>
+ by jratcliffscarab
+ on Apr 25, 2009
+ &nbsp; <a href="/p/isogame-iphone/source/diff?spec=svn5&r=2&amp;format=side&amp;path=/trunk/Media/WorldViewer/GameLevels/level1.dat&amp;old_path=/trunk/Media/WorldViewer/GameLevels/level1.dat&amp;old=">Diff</a>
+ </div>
+ <pre>First source submit</pre>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ var detail_url = '/p/isogame-iphone/source/detail?r=2&spec=svn5';
+ var publish_url = '/p/isogame-iphone/source/detail?r=2&spec=svn5#publish';
+ // describe the paths of this revision in javascript.
+ var changed_paths = [];
+ var changed_urls = [];
+ 
+ changed_paths.push('/trunk/Media');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/Media/WorldViewer');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media/WorldViewer?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/Media/WorldViewer/GameLevels');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/Media/WorldViewer/GameLevels/level1.dat');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level1.dat?r\x3d2\x26spec\x3dsvn5');
+ 
+ var selected_path = '/trunk/Media/WorldViewer/GameLevels/level1.dat';
+ 
+ 
+ changed_paths.push('/trunk/Media/WorldViewer/GameLevels/level2.dat');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level2.dat?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/Media/WorldViewer/GameLevels/level3.dat');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level3.dat?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/Media/WorldViewer/GameLevels/level4.dat');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level4.dat?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/README');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/README?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes/EAGLView.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/EAGLView.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes/EAGLView.mm');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/EAGLView.mm?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes/GLSpriteAppDelegate.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/GLSpriteAppDelegate.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes/GLSpriteAppDelegate.m');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/GLSpriteAppDelegate.m?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes/world.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/world.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Classes/world.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/world.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Default.png');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Default.png?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/GLSprite.xcodeproj');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite.xcodeproj?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/GLSprite.xcodeproj/jratcliffscarab.mode1v3');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite.xcodeproj/jratcliffscarab.mode1v3?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/GLSprite.xcodeproj/project.pbxproj');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite.xcodeproj/project.pbxproj?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/GLSprite_Prefix.pch');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite_Prefix.pch?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Icon.png');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Icon.png?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Info.plist');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Info.plist?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/ReadMe.txt');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/ReadMe.txt?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/Sprite.png');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Sprite.png?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/WorldViewer.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/WorldViewer.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/en.lproj');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/en.lproj?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/en.lproj/MainWindow.xib');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/en.lproj/MainWindow.xib?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/app/WorldViewer/main.m');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/app/WorldViewer/main.m?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/bin');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/bin?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/bin/win32');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/bin/win32?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/bin/win32/WorldViewer.exe');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/bin/win32/WorldViewer.exe?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/bin/win32/WorldViewer.exe.manifest');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/bin/win32/WorldViewer.exe.manifest?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/bin/win32/glew32.dll');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/bin/win32/glew32.dll?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/bin/win32/glut32.dll');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/bin/win32/glut32.dll?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/vc8');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/vc8?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/vc8/WorldViewer.sln');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/vc8/WorldViewer.sln?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/vc8/WorldViewer.vcproj');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/vc8/WorldViewer.vcproj?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/xpj');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/xpj?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/xpj/WorldViewer.xpj');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/xpj/WorldViewer.xpj?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/xpj/build1.bat');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/xpj/build1.bat?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/compiler/xpj/xpj.exe');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/compiler/xpj/xpj.exe?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/GL');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/GL/glext.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/glext.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/GL/glut.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/glut.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/GL/real glut.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/real glut.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/GL/wglext.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/wglext.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL/config.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/config.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL/devil_internal_exports.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/devil_internal_exports.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL/il.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/il.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL/il_wrap.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/il_wrap.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL/ilu.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/ilu.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/IL/ilut.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/ilut.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut/README-win32.txt');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/README-win32.txt?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut/glut.def');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut.def?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut/glut32.dll');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut32.dll?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut/glut32.lib');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut32.lib?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut/glut32_static_release.lib');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut32_static_release.lib?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/OpenGL/glut/readme_glut_static.txt');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/readme_glut_static.txt?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/glew');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/glew?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/glew/glew.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/glew/glew.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/ext/glew/glew32.lib');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/ext/glew/glew32.lib?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/IphoneGame');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/IphoneGame?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/IphoneGame/IphoneGame.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/IphoneGame/IphoneGame.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/IphoneGraphics');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/IphoneGraphics?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/IphoneGraphics/IpSimpleVertex.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/IphoneGraphics/IpSimpleVertex.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/IphoneGraphics/IphoneGraphics.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/IphoneGraphics/IphoneGraphics.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/Ip.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/Ip.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpBitField.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpBitField.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpBounds3.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpBounds3.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpBox.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpBox.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpCapsule.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpCapsule.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpFoundation.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpFoundation.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpI16Vec3.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpI16Vec3.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpMat44.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpMat44.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpPlane.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpPlane.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpQuat.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpQuat.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpRay.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpRay.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpSegment.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpSegment.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpSimpleTriangleMesh.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpSimpleTriangleMesh.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpSphere.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpSphere.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpStream.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpStream.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpStreaming.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpStreaming.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpStreaming.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpStreaming.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpTri.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpTri.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpUtilities.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpUtilities.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpVec2.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVec2.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpVec3.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVec3.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpVec4.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVec4.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/IpVolumeIntegration.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVolumeIntegration.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/Ipf.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/Ipf.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/ipmath.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/ipmath.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/ipsimpletypes.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/ipsimpletypes.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/iphone/ipusermemalloc.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/iphone/ipusermemalloc.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/picopng');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/picopng?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/picopng/picopng.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/picopng/picopng.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/picopng/picopng.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/picopng/picopng.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/snippets');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/snippets?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/snippets/snippets.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/snippets/snippets.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/snippets/stable.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/snippets/stable.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/snippets/stringdict.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/snippets/stringdict.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/include/common/snippets/stringdict.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/include/common/snippets/stringdict.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGame');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGame?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGame/FileCode.exe');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGame/FileCode.exe?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGame/GameLevel.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGame/GameLevel.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGame/GameLevel.h');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGame/GameLevel.h?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGame/IphoneGame.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGame/IphoneGame.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGraphics');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGraphics?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ changed_paths.push('/trunk/src/IphoneGraphics/IphoneGraphics.cpp');
+ changed_urls.push('/p/isogame-iphone/source/browse/trunk/src/IphoneGraphics/IphoneGraphics.cpp?r\x3d2\x26spec\x3dsvn5');
+ 
+ 
+ function getCurrentPageIndex() {
+ for (var i = 0; i < changed_paths.length; i++) {
+ if (selected_path == changed_paths[i]) {
+ return i;
+ }
+ }
+ }
+ function getNextPage() {
+ var i = getCurrentPageIndex();
+ if (i < changed_paths.length - 1) {
+ return changed_urls[i + 1];
+ }
+ return null;
+ }
+ function getPreviousPage() {
+ var i = getCurrentPageIndex();
+ if (i > 0) {
+ return changed_urls[i - 1];
+ }
+ return null;
+ }
+ function gotoNextPage() {
+ var page = getNextPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoPreviousPage() {
+ var page = getPreviousPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoDetailPage() {
+ window.location = detail_url;
+ }
+ function gotoPublishPage() {
+ window.location = publish_url;
+ }
+</script>
+
+ 
+ <style type="text/css">
+ #review_nav {
+ border-top: 3px solid white;
+ padding-top: 6px;
+ margin-top: 1em;
+ }
+ #review_nav td {
+ vertical-align: middle;
+ }
+ #review_nav select {
+ margin: .5em 0;
+ }
+ </style>
+ <div id="review_nav">
+ <table><tr><td>Go to:&nbsp;</td><td>
+ <select name="files_in_rev" onchange="window.location=this.value">
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media?r=2&amp;spec=svn5"
+ 
+ >/trunk/Media</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer?r=2&amp;spec=svn5"
+ 
+ >/trunk/Media/WorldViewer</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels?r=2&amp;spec=svn5"
+ 
+ >/trunk/Media/WorldViewer/GameLevels</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level1.dat?r=2&amp;spec=svn5"
+ selected="selected"
+ >...orldViewer/GameLevels/level1.dat</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level2.dat?r=2&amp;spec=svn5"
+ 
+ >...orldViewer/GameLevels/level2.dat</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level3.dat?r=2&amp;spec=svn5"
+ 
+ >...orldViewer/GameLevels/level3.dat</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/Media/WorldViewer/GameLevels/level4.dat?r=2&amp;spec=svn5"
+ 
+ >...orldViewer/GameLevels/level4.dat</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/README?r=2&amp;spec=svn5"
+ 
+ >/trunk/README</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app?r=2&amp;spec=svn5"
+ 
+ >/trunk/app</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/Classes</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/EAGLView.h?r=2&amp;spec=svn5"
+ 
+ >...p/WorldViewer/Classes/EAGLView.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/EAGLView.mm?r=2&amp;spec=svn5"
+ 
+ >.../WorldViewer/Classes/EAGLView.mm</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/GLSpriteAppDelegate.h?r=2&amp;spec=svn5"
+ 
+ >...er/Classes/GLSpriteAppDelegate.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/GLSpriteAppDelegate.m?r=2&amp;spec=svn5"
+ 
+ >...er/Classes/GLSpriteAppDelegate.m</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/world.cpp?r=2&amp;spec=svn5"
+ 
+ >...pp/WorldViewer/Classes/world.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Classes/world.h?r=2&amp;spec=svn5"
+ 
+ >.../app/WorldViewer/Classes/world.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Default.png?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/Default.png</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite.xcodeproj?r=2&amp;spec=svn5"
+ 
+ >...p/WorldViewer/GLSprite.xcodeproj</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite.xcodeproj/jratcliffscarab.mode1v3?r=2&amp;spec=svn5"
+ 
+ >...codeproj/jratcliffscarab.mode1v3</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite.xcodeproj/project.pbxproj?r=2&amp;spec=svn5"
+ 
+ >...Sprite.xcodeproj/project.pbxproj</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/GLSprite_Prefix.pch?r=2&amp;spec=svn5"
+ 
+ >.../WorldViewer/GLSprite_Prefix.pch</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Icon.png?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/Icon.png</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Info.plist?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/Info.plist</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/ReadMe.txt?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/ReadMe.txt</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/Sprite.png?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/Sprite.png</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/WorldViewer.cpp?r=2&amp;spec=svn5"
+ 
+ >.../app/WorldViewer/WorldViewer.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/en.lproj?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/en.lproj</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/en.lproj/MainWindow.xib?r=2&amp;spec=svn5"
+ 
+ >...ldViewer/en.lproj/MainWindow.xib</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/app/WorldViewer/main.m?r=2&amp;spec=svn5"
+ 
+ >/trunk/app/WorldViewer/main.m</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/bin?r=2&amp;spec=svn5"
+ 
+ >/trunk/bin</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/bin/win32?r=2&amp;spec=svn5"
+ 
+ >/trunk/bin/win32</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/bin/win32/WorldViewer.exe?r=2&amp;spec=svn5"
+ 
+ >/trunk/bin/win32/WorldViewer.exe</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/bin/win32/WorldViewer.exe.manifest?r=2&amp;spec=svn5"
+ 
+ >...n/win32/WorldViewer.exe.manifest</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/bin/win32/glew32.dll?r=2&amp;spec=svn5"
+ 
+ >/trunk/bin/win32/glew32.dll</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/bin/win32/glut32.dll?r=2&amp;spec=svn5"
+ 
+ >/trunk/bin/win32/glut32.dll</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/vc8?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler/vc8</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/vc8/WorldViewer.sln?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler/vc8/WorldViewer.sln</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/vc8/WorldViewer.vcproj?r=2&amp;spec=svn5"
+ 
+ >.../compiler/vc8/WorldViewer.vcproj</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/xpj?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler/xpj</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/xpj/WorldViewer.xpj?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler/xpj/WorldViewer.xpj</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/xpj/build1.bat?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler/xpj/build1.bat</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/compiler/xpj/xpj.exe?r=2&amp;spec=svn5"
+ 
+ >/trunk/compiler/xpj/xpj.exe</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/GL</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/glext.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/GL/glext.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/glut.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/GL/glut.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/real glut.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/GL/real glut.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/GL/wglext.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/GL/wglext.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/IL</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/config.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/IL/config.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/devil_internal_exports.h?r=2&amp;spec=svn5"
+ 
+ >...enGL/IL/devil_internal_exports.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/il.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/IL/il.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/il_wrap.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/IL/il_wrap.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/ilu.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/IL/ilu.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/IL/ilut.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/IL/ilut.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/glut</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/README-win32.txt?r=2&amp;spec=svn5"
+ 
+ >...ext/OpenGL/glut/README-win32.txt</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut.def?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/glut/glut.def</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut32.dll?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/glut/glut32.dll</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut32.lib?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/OpenGL/glut/glut32.lib</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/glut32_static_release.lib?r=2&amp;spec=svn5"
+ 
+ >...L/glut/glut32_static_release.lib</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/OpenGL/glut/readme_glut_static.txt?r=2&amp;spec=svn5"
+ 
+ >...enGL/glut/readme_glut_static.txt</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/glew?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/glew</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/glew/glew.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/glew/glew.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/ext/glew/glew32.lib?r=2&amp;spec=svn5"
+ 
+ >/trunk/ext/glew/glew32.lib</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include?r=2&amp;spec=svn5"
+ 
+ >/trunk/include</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/IphoneGame?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/IphoneGame</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/IphoneGame/IphoneGame.h?r=2&amp;spec=svn5"
+ 
+ >.../include/IphoneGame/IphoneGame.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/IphoneGraphics?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/IphoneGraphics</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/IphoneGraphics/IpSimpleVertex.h?r=2&amp;spec=svn5"
+ 
+ >.../IphoneGraphics/IpSimpleVertex.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/IphoneGraphics/IphoneGraphics.h?r=2&amp;spec=svn5"
+ 
+ >.../IphoneGraphics/IphoneGraphics.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/common</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/common/iphone</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/Ip.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/common/iphone/Ip.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpBitField.h?r=2&amp;spec=svn5"
+ 
+ >...clude/common/iphone/IpBitField.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpBounds3.h?r=2&amp;spec=svn5"
+ 
+ >...nclude/common/iphone/IpBounds3.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpBox.h?r=2&amp;spec=svn5"
+ 
+ >...nk/include/common/iphone/IpBox.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpCapsule.h?r=2&amp;spec=svn5"
+ 
+ >...nclude/common/iphone/IpCapsule.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpFoundation.h?r=2&amp;spec=svn5"
+ 
+ >...ude/common/iphone/IpFoundation.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpI16Vec3.h?r=2&amp;spec=svn5"
+ 
+ >...nclude/common/iphone/IpI16Vec3.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpMat44.h?r=2&amp;spec=svn5"
+ 
+ >.../include/common/iphone/IpMat44.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpPlane.h?r=2&amp;spec=svn5"
+ 
+ >.../include/common/iphone/IpPlane.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpQuat.h?r=2&amp;spec=svn5"
+ 
+ >...k/include/common/iphone/IpQuat.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpRay.h?r=2&amp;spec=svn5"
+ 
+ >...nk/include/common/iphone/IpRay.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpSegment.h?r=2&amp;spec=svn5"
+ 
+ >...nclude/common/iphone/IpSegment.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpSimpleTriangleMesh.h?r=2&amp;spec=svn5"
+ 
+ >...on/iphone/IpSimpleTriangleMesh.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpSphere.h?r=2&amp;spec=svn5"
+ 
+ >...include/common/iphone/IpSphere.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpStream.h?r=2&amp;spec=svn5"
+ 
+ >...include/common/iphone/IpStream.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpStreaming.cpp?r=2&amp;spec=svn5"
+ 
+ >...de/common/iphone/IpStreaming.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpStreaming.h?r=2&amp;spec=svn5"
+ 
+ >...lude/common/iphone/IpStreaming.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpTri.h?r=2&amp;spec=svn5"
+ 
+ >...nk/include/common/iphone/IpTri.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpUtilities.h?r=2&amp;spec=svn5"
+ 
+ >...lude/common/iphone/IpUtilities.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVec2.h?r=2&amp;spec=svn5"
+ 
+ >...k/include/common/iphone/IpVec2.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVec3.h?r=2&amp;spec=svn5"
+ 
+ >...k/include/common/iphone/IpVec3.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVec4.h?r=2&amp;spec=svn5"
+ 
+ >...k/include/common/iphone/IpVec4.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/IpVolumeIntegration.h?r=2&amp;spec=svn5"
+ 
+ >...mon/iphone/IpVolumeIntegration.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/Ipf.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/common/iphone/Ipf.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/ipmath.h?r=2&amp;spec=svn5"
+ 
+ >...k/include/common/iphone/ipmath.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/ipsimpletypes.h?r=2&amp;spec=svn5"
+ 
+ >...de/common/iphone/ipsimpletypes.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/iphone/ipusermemalloc.h?r=2&amp;spec=svn5"
+ 
+ >...e/common/iphone/ipusermemalloc.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/picopng?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/common/picopng</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/picopng/picopng.cpp?r=2&amp;spec=svn5"
+ 
+ >...clude/common/picopng/picopng.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/picopng/picopng.h?r=2&amp;spec=svn5"
+ 
+ >...include/common/picopng/picopng.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/snippets?r=2&amp;spec=svn5"
+ 
+ >/trunk/include/common/snippets</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/snippets/snippets.h?r=2&amp;spec=svn5"
+ 
+ >...clude/common/snippets/snippets.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/snippets/stable.h?r=2&amp;spec=svn5"
+ 
+ >...include/common/snippets/stable.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/snippets/stringdict.cpp?r=2&amp;spec=svn5"
+ 
+ >...e/common/snippets/stringdict.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/include/common/snippets/stringdict.h?r=2&amp;spec=svn5"
+ 
+ >...ude/common/snippets/stringdict.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src?r=2&amp;spec=svn5"
+ 
+ >/trunk/src</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGame?r=2&amp;spec=svn5"
+ 
+ >/trunk/src/IphoneGame</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGame/FileCode.exe?r=2&amp;spec=svn5"
+ 
+ >/trunk/src/IphoneGame/FileCode.exe</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGame/GameLevel.cpp?r=2&amp;spec=svn5"
+ 
+ >/trunk/src/IphoneGame/GameLevel.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGame/GameLevel.h?r=2&amp;spec=svn5"
+ 
+ >/trunk/src/IphoneGame/GameLevel.h</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGame/IphoneGame.cpp?r=2&amp;spec=svn5"
+ 
+ >...nk/src/IphoneGame/IphoneGame.cpp</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGraphics?r=2&amp;spec=svn5"
+ 
+ >/trunk/src/IphoneGraphics</option>
+ 
+ <option value="/p/isogame-iphone/source/browse/trunk/src/IphoneGraphics/IphoneGraphics.cpp?r=2&amp;spec=svn5"
+ 
+ >...phoneGraphics/IphoneGraphics.cpp</option>
+ 
+ </select>
+ </td></tr></table>
+ 
+ 
+ 
+
+
+
+ 
+ </div>
+ 
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="older_bubble">
+ <p>Older revisions</p>
+ 
+ <a href="/p/isogame-iphone/source/list?path=/trunk/Media/WorldViewer/GameLevels/level1.dat&start=2">All revisions of this file</a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="fileinfo_bubble">
+ <p>File info</p>
+ 
+ <div>Size: 624468 bytes</div>
+ 
+ <div><a href="//isogame-iphone.googlecode.com/svn-history/r5/trunk/Media/WorldViewer/GameLevels/level1.dat">View raw file</a></div>
+ </div>
+ 
+ <div id="props">
+ <p>File properties</p>
+ <dl>
+ 
+ <dt>svn:mime-type</dt>
+ <dd>application/octet-stream</dd>
+ 
+ </dl>
+ </div>
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ </div>
+
+
+</div>
+
+</div>
+</div>
+
+
+<script src="https://ssl.gstatic.com/codesite/ph/3374407039186159233/js/source_file_scripts.js"></script>
+
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/3374407039186159233/js/kibbles.js"></script>
+ <script type="text/javascript">
+ var lastStop = null;
+ var initialized = false;
+ 
+ function updateCursor(next, prev) {
+ if (prev && prev.element) {
+ prev.element.className = 'cursor_stop cursor_hidden';
+ }
+ if (next && next.element) {
+ next.element.className = 'cursor_stop cursor';
+ lastStop = next.index;
+ }
+ }
+ 
+ function pubRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initialized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initialized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftDestroyed(data) {
+ updateCursorForCell(data.cellId, 'nocursor');
+ if (initialized) {
+ reloadCursors();
+ }
+ }
+ function reloadCursors() {
+ kibbles.skipper.reset();
+ loadCursors();
+ if (lastStop != null) {
+ kibbles.skipper.setCurrentStop(lastStop);
+ }
+ }
+ // possibly the simplest way to insert any newly added comments
+ // is to update the class of the corresponding cursor row,
+ // then refresh the entire list of rows.
+ function updateCursorForCell(cellId, className) {
+ var cell = document.getElementById(cellId);
+ // we have to go two rows back to find the cursor location
+ var row = getPreviousElement(cell.parentNode);
+ row.className = className;
+ }
+ // returns the previous element, ignores text nodes.
+ function getPreviousElement(e) {
+ var element = e.previousSibling;
+ if (element.nodeType == 3) {
+ element = element.previousSibling;
+ }
+ if (element && element.tagName) {
+ return element;
+ }
+ }
+ function loadCursors() {
+ // register our elements with skipper
+ var elements = CR_getElements('*', 'cursor_stop');
+ var len = elements.length;
+ for (var i = 0; i < len; i++) {
+ var element = elements[i]; 
+ element.className = 'cursor_stop cursor_hidden';
+ kibbles.skipper.append(element);
+ }
+ }
+ function toggleComments() {
+ CR_toggleCommentDisplay();
+ reloadCursors();
+ }
+ function keysOnLoadHandler() {
+ // setup skipper
+ kibbles.skipper.addStopListener(
+ kibbles.skipper.LISTENER_TYPE.PRE, updateCursor);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_top', 50);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_bottom', 100);
+ // Register our keys
+ kibbles.skipper.addFwdKey("n");
+ kibbles.skipper.addRevKey("p");
+ kibbles.keys.addKeyPressListener(
+ 'u', function() { window.location = detail_url; });
+ kibbles.keys.addKeyPressListener(
+ 'r', function() { window.location = detail_url + '#publish'; });
+ 
+ kibbles.keys.addKeyPressListener('j', gotoNextPage);
+ kibbles.keys.addKeyPressListener('k', gotoPreviousPage);
+ 
+ 
+ }
+ </script>
+<script src="https://ssl.gstatic.com/codesite/ph/3374407039186159233/js/code_review_scripts.js"></script>
+<script type="text/javascript">
+ function showPublishInstructions() {
+ var element = document.getElementById('review_instr');
+ if (element) {
+ element.className = 'opened';
+ }
+ }
+ var codereviews;
+ function revsOnLoadHandler() {
+ // register our source container with the commenting code
+ var paths = {'svn5': '/trunk/Media/WorldViewer/GameLevels/level1.dat'}
+ codereviews = CR_controller.setup(
+ {"profileUrl": "/u/112241180151938862863/", "token": "ABZ6GAdaNzbQBU7_PXu_PXb8fAJXKDRHcQ:1403098367555", "projectHomeUrl": "/p/isogame-iphone", "projectName": "isogame-iphone", "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/3374407039186159233", "loggedInUserEmail": "heinsteinh@gmail.com", "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "relativeBaseUrl": "", "domainName": null}, '', 'svn5', paths,
+ CR_BrowseIntegrationFactory);
+ 
+ codereviews.registerActivityListener(CR_ActivityType.REVEAL_DRAFT_PLATE, showPublishInstructions);
+ 
+ codereviews.registerActivityListener(CR_ActivityType.REVEAL_PUB_PLATE, pubRevealed);
+ codereviews.registerActivityListener(CR_ActivityType.REVEAL_DRAFT_PLATE, draftRevealed);
+ codereviews.registerActivityListener(CR_ActivityType.DISCARD_DRAFT_COMMENT, draftDestroyed);
+ 
+ 
+ var initialized = true;
+ reloadCursors();
+ }
+ window.onload = function() {keysOnLoadHandler(); revsOnLoadHandler();};
+
+</script>
+<script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/3374407039186159233/js/dit_scripts.js"></script>
+
+ 
+ 
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/3374407039186159233/js/ph_core.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
