@@ -18,7 +18,7 @@ namespace Framework
 		void	LogDebug(const char*, const char*, ...);
 		void	LogMessage(const char*, const char*, ...);
 		void	LogError(const char*, const char*, ...);
-
+		void	LogWarnning(const char*, const char*, ...);
 
 		bool startLog(std::string strPrefix, std::string strLogDir = "");
 		bool closeLog();

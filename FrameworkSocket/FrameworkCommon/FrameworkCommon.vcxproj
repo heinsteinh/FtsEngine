@@ -79,9 +79,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BasePacket.h" />
     <ClInclude Include="BlockSocket.h" />
     <ClInclude Include="Blowfish.h" />
     <ClInclude Include="Buffer.h" />
+    <ClInclude Include="CommonFunc.h" />
     <ClInclude Include="CommonSocket.h" />
     <ClInclude Include="Compack.h" />
     <ClInclude Include="ConcurrentQueue.h" />
@@ -99,8 +101,10 @@
     <ClInclude Include="TSingleton.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BasePacket.cpp" />
     <ClCompile Include="BlockSocket.cpp" />
     <ClCompile Include="Blowfish.cpp" />
+    <ClCompile Include="CommonFunc.cpp" />
     <ClCompile Include="CommonSocket.cpp" />
     <ClCompile Include="FrameworkCommon.cpp" />
     <ClCompile Include="Log.cpp" />

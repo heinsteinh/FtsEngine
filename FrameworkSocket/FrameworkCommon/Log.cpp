@@ -213,10 +213,10 @@ void CLog::LogMessage(const char* serviceName, const char* format, ...)
 		}
 	}
 
-
-
 }
-void CLog::LogError(const char* serviceName, const char* format, ...)
+
+
+void CLog::LogWarnning(const char* serviceName, const char* format, ...)
 {
 
 	if (m_pLogFile == NULL)
@@ -240,6 +240,50 @@ void CLog::LogError(const char* serviceName, const char* format, ...)
 	va_start(args, format);
 	auto body = string_format(format, args);
 	va_end(args);
+	auto message = string_format("%s [Warn ] %s: %s", buf, serviceName, body.c_str());
+	WriteToLog(message.c_str());
+
+
+	strcat((char*)message.c_str(), "\n");
+	scope_lock lck(m_lockWrite);
+	{
+		fputs(message.c_str(), m_pLogFile);
+		m_LogCount++;
+		if (m_LogCount >= 1)
+		{
+			fflush(m_pLogFile);
+			m_LogCount = 0;
+		}
+	}
+
+}
+
+
+
+void CLog::LogError(const char* serviceName, const char* format, ...)
+{
+
+	if (m_pLogFile == NULL)
+	{
+		return;
+	}
+
+	char buf[512];
+	memset(buf, 0, sizeof(0));
+
+	time_t now = time(NULL);
+	struct tm *ts = localtime(&now);
+
+	time_t _time;
+	time(&_time);
+	tm *pTime = localtime(&_time);
+	//sprintf(buf, "[%02d-%02d-%02d %02d:%02d:%02d][%08x]  ", pTime->tm_year % 100, pTime->tm_mon, pTime->tm_mday, pTime->tm_hour, pTime->tm_min, pTime->tm_sec, 0xffffffff & (uint32_t)std::this_thread::get_id().hash());
+	sprintf(buf, "[%02d-%02d-%02d %02d:%02d:%02d]  ", pTime->tm_year % 100, pTime->tm_mon, pTime->tm_mday, pTime->tm_hour, pTime->tm_min, pTime->tm_sec);
+
+	va_list args;
+	va_start(args, format);
+	auto body = string_format(format, args);
+	va_end(args);
 	auto message = string_format("%s [Error] %s: %s", buf, serviceName, body.c_str());
 	WriteToLog(message.c_str());
 
@@ -257,6 +301,9 @@ void CLog::LogError(const char* serviceName, const char* format, ...)
 	}
 
 }
+
+
+
 
 
 void CLog::WriteToLog(const char* message)
