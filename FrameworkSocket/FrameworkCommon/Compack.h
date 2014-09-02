@@ -52,7 +52,7 @@ typedef int SOCKET;
 #include <algorithm>
 #include <functional>
 
-
+#include <cassert>
 #include <cstdint>
 
 
