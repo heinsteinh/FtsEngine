@@ -47,8 +47,6 @@ void TaskQueue::Stop()
 {
 	try
 	{
-		//boost::this_thread::disable_interruption di;
-		//boost::mutex::scoped_lock lck(start_stop_mutex_);
 
 		scoped_lock lck(start_stop_mutex_);
 

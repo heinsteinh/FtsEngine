@@ -15,6 +15,10 @@
 #include <crtdbg.h>
 #include <MSWSock.h>
 
+#include <direct.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 
 #pragma comment ( lib, "winmm.lib" )
 #pragma comment(lib,"ws2_32.lib")
