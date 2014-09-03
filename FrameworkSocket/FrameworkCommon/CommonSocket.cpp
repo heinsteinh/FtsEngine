@@ -122,22 +122,41 @@ int32_t Net::GetSocketLastError()
 }
 
 
-std::string Net::GetLastErrorStr(INT32 nError)
+std::string Net::GetLastErrorStr(uint32_t nError)
 {
+	std::string msg;
+	msg += (" with error " + std::to_string(nError) + ": ");
 
-	std::wstring strErrorText;
 #ifdef WIN32
-	LPVOID lpMsgBuf;
+
+	LPSTR lpMsgBuf = NULL;
 	FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, nError,
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPTSTR)&lpMsgBuf, 0, NULL);
-	strErrorText = (LPTSTR)lpMsgBuf;
+
+	FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
+		NULL, nError, 0, (LPSTR)&lpMsgBuf, 0, NULL);
+	msg += lpMsgBuf;
+
 	LocalFree(lpMsgBuf);
 #else
-	strErrorText = strerror(nError);
+	msg = strerror(nError);
 #endif
-		std::string str((const char*)&strErrorText[0], sizeof(wchar_t) / sizeof(char)*strErrorText.size());		
-		//std::string str_v(strErrorText.begin(), strErrorText.end());
-		return str;
+
+
+//	std::wstring strErrorText;
+//#ifdef WIN32
+//	LPVOID lpMsgBuf;
+//	FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, nError,
+//		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPTSTR)&lpMsgBuf, 0, NULL);
+//	strErrorText = (LPTSTR)lpMsgBuf;
+//	LocalFree(lpMsgBuf);
+//#else
+//	strErrorText = strerror(nError);
+//#endif
+//		std::string str((const char*)&strErrorText[0], sizeof(wchar_t) / sizeof(char)*strErrorText.size());		
+//		//std::string str_v(strErrorText.begin(), strErrorText.end());
+
+		return msg;
 }
 
 

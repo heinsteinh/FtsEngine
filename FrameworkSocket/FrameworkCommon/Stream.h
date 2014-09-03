@@ -12,6 +12,7 @@ namespace Framework
 		STREAM_SEEK_END = 1,
 		STREAM_SEEK_CUR = 2,
 	};
+
 	class CStream
 	{
 	public:

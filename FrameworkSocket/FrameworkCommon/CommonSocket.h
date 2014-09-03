@@ -37,7 +37,7 @@ namespace Net
 	void	ShutDownRecv(SOCKET hSocket);
 
 	void	CloseSocket(SOCKET hSocket);
-	std::string GetLastErrorStr(INT32 nError);
+	std::string GetLastErrorStr(uint32_t nError);
 	uint32_t	IpAddrStrToInt(CHAR *pszIpAddr);
 	std::string IpAddrIntToStr(UINT32 dwIpAddr);
 

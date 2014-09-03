@@ -76,11 +76,15 @@ std::string CStream::ReadString()
 }
 std::string CStream::ReadString(size_t length)
 {
-	if (length == 0) return std::string();
+	if (length == 0) 
+		return std::string();
+
 	char* stringBuffer = reinterpret_cast<char*>(alloca(length));
 	Read(stringBuffer, length);
+	
 	return std::string(stringBuffer, stringBuffer + length);
 }
+
 void CStream::Write8(uint8_t nValue)
 {
 	Write(&nValue, 1);
