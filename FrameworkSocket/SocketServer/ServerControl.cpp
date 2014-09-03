@@ -137,15 +137,15 @@ void ServerControl::PingPong()
 			pinged = std::chrono::milliseconds(now).count() % std::numeric_limits<int>::max();
 
 
-			PingMsg pingMsg(1);
-			Framework::CBasePacket basepacket;
+			//PingMessage pingMsg(1);
+			//Framework::CBasePacket basepacket;
 
-			basepacket.SetTargetId(1);
-			basepacket.SetSourceId(1);
-			basepacket.ToPacketData();
-			basepacket.addSubPacket(pingMsg);
+			//basepacket.SetTargetId(1);
+			//basepacket.SetSourceId(1);
+			//basepacket.ToPacketData();
+			//basepacket.addSubPacket(pingMsg);
 
-			SendToAllClient(&basepacket.GetData());
+			//SendToAllClient(&basepacket.GetData());
 		}
 	}
 }

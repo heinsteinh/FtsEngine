@@ -35,8 +35,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		gmeMsg.gamePassword = "test";
 
 
-		Framework::GameCreateMessage gmeMsg1 = Framework::GameCreateMessage::deserialize(gmeMsg.GetStream(), 4, 3);
-
 
 
 		

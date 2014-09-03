@@ -1,6 +1,7 @@
 #pragma once
 
 
+#include "Compack.h"
 #include "Streaming.h"
 
 
@@ -11,7 +12,7 @@
 
 namespace Framework 
 {
-	enum MESSAGE_TYPE : uint8_t;
+	enum MESSAGE_TYPE : uint16_t;
 	struct Message
 	{
 	public:
@@ -58,25 +59,26 @@ namespace Framework
 		};
 
 		Gmk::Stream* GetStream() { return m_pStreaming; }
+
+
 	protected:
 		Gmk::Stream*				m_pStreaming;
 
 
-	protected:
-		
+
 
 	};
 
 
 
-	typedef enum MESSAGE_TYPE : uint8_t
+	typedef enum MESSAGE_TYPE : uint16_t
 	{
-
 		CMD_PING = 1000,
 		CMD_KEEPALIVE,
 		GAME_CREATE
 
 	}MESSAGE_TYPE;
+
 
 
 struct GameCreateMessage : public Message 
@@ -95,14 +97,7 @@ public:
 
 	std::string Serialize() const override
 	{
-		m_pStreaming->WriteByte(_MESSAGE_TYPE);
-		m_pStreaming->WriteByte(numPlayers);
-		m_pStreaming->WriteDword(timeout);
-		m_pStreaming->WriteString(gamePassword);
-		m_pStreaming->WriteByte(gridSize);
-		m_pStreaming->WriteByte(numPlanes);
-		m_pStreaming->WriteByte((uint8_t)headshots);
-		m_pStreaming->WriteByte((uint8_t)reveal);
+
 
 		return "";
 	}
@@ -116,17 +111,7 @@ public:
 		GameCreateMessage* ret = new GameCreateMessage;
 		const char *end = buf + len;
 		
-	
-		Gmk::Stream* pStream;
 
-		ret->numPlayers		= pStream->ReadByte();
-		ret->timeout			= pStream->ReadDword();
-		ret->gamePassword = pStream->ReadString();
-
-		ret->gridSize		= pStream->ReadByte();
-		ret->numPlanes	= pStream->ReadByte();
-		ret->headshots	= (pStream->ReadByte() !=0) ? true : false;
-		ret->reveal			= (pStream->ReadByte() != 0) ? true : false;
 		
 		if (buf != end) //Message was not an exact fit to length; Mistake on client side
 			throw FormatException("Actual length doesn't match expected length for message");
@@ -141,14 +126,15 @@ public:
 
 struct PingMessage : public Message
 {
+	
+	TimeStamp _pingTime;
+
+public:
 	MESSAGE_TYPE getMessageType() const override { return CMD_PING; }
 	
-	//TimeStamp _pingTime;
-	//PingMsg(TimeStamp time_) : _pingTime(time_)
-	//{
-	//	
-	//}
-
+	PingMessage(TimeStamp time_) : _pingTime(time_)
+	{		
+	}
 };
 
 

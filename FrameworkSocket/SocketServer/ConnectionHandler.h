@@ -6,6 +6,7 @@
 #include <deque>
 
 
+#include "../FrameworkCommon/CommonMessage.h"
 #include "../FrameworkCommon/MemStream.h"
 #include "../FrameworkCommon/Compack.h"
 #include "../FrameworkCommon/PacketUtils.h"
