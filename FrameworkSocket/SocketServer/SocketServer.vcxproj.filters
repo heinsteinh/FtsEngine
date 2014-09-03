@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\LibHeader">
-      <UniqueIdentifier>{9925086a-cd91-4a3f-89dd-e518a2ea328e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\LibSource">
       <UniqueIdentifier>{f4d54623-17c2-42d9-be37-6f7745236bd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LibHeader">
+      <UniqueIdentifier>{9925086a-cd91-4a3f-89dd-e518a2ea328e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +45,39 @@
     <ClInclude Include="..\FrameworkCommon\Compack.h">
       <Filter>Header Files\LibHeader</Filter>
     </ClInclude>
+    <ClInclude Include="ConnectionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\StringFormat.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\Stream.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\PacketUtils.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\MemStream.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\Exceptions.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\Blowfish.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\TaskQueue.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\BlockSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\MutexHelper.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\BasePacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -59,11 +92,41 @@
     <ClCompile Include="ServerControl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\FrameworkCommon\Log.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\FrameworkCommon\CommonSocket.cpp">
       <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\Exceptions.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\TaskQueue.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\Stream.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\Blowfish.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\MemStream.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\Log.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\PacketUtils.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\MutexHelper.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\BlockSocket.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\BasePacket.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -52,10 +52,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\zlib128-dll\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\zlib128-dll\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -84,6 +86,7 @@
     <ClInclude Include="Blowfish.h" />
     <ClInclude Include="Buffer.h" />
     <ClInclude Include="CommonFunc.h" />
+    <ClInclude Include="CommonMessage.h" />
     <ClInclude Include="CommonSocket.h" />
     <ClInclude Include="Compack.h" />
     <ClInclude Include="ConcurrentQueue.h" />
@@ -96,6 +99,7 @@
     <ClInclude Include="PacketUtils.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stream.h" />
+    <ClInclude Include="Streaming.h" />
     <ClInclude Include="StringFormat.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TaskQueue.h" />
@@ -106,6 +110,7 @@
     <ClCompile Include="BlockSocket.cpp" />
     <ClCompile Include="Blowfish.cpp" />
     <ClCompile Include="CommonFunc.cpp" />
+    <ClCompile Include="CommonMessage.cpp" />
     <ClCompile Include="CommonSocket.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="FrameworkCommon.cpp" />
@@ -119,6 +124,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Stream.cpp" />
+    <ClCompile Include="Streaming.cpp" />
     <ClCompile Include="TaskQueue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

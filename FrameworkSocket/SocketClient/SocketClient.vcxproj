@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CECD6B1B-3407-4EF1-B526-0C0227AA2519}</ProjectGuid>
+    <ProjectGuid>{A867BC65-97BD-42D5-87FB-75ACBDAD8E7A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SocketServer</RootNamespace>
+    <RootNamespace>SocketClient</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -50,13 +50,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\zlib128-dll\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,41 +79,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\FrameworkCommon\BasePacket.h" />
-    <ClInclude Include="..\FrameworkCommon\BlockSocket.h" />
-    <ClInclude Include="..\FrameworkCommon\Blowfish.h" />
-    <ClInclude Include="..\FrameworkCommon\CommonSocket.h" />
-    <ClInclude Include="..\FrameworkCommon\Compack.h" />
-    <ClInclude Include="..\FrameworkCommon\Exceptions.h" />
-    <ClInclude Include="..\FrameworkCommon\Log.h" />
-    <ClInclude Include="..\FrameworkCommon\MemStream.h" />
-    <ClInclude Include="..\FrameworkCommon\MutexHelper.h" />
-    <ClInclude Include="..\FrameworkCommon\PacketUtils.h" />
-    <ClInclude Include="..\FrameworkCommon\Stream.h" />
-    <ClInclude Include="..\FrameworkCommon\StringFormat.h" />
-    <ClInclude Include="..\FrameworkCommon\TaskQueue.h" />
-    <ClInclude Include="ConnectionHandler.h" />
-    <ClInclude Include="Message.h" />
-    <ClInclude Include="ServerControl.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\FrameworkCommon\BasePacket.cpp" />
-    <ClCompile Include="..\FrameworkCommon\BlockSocket.cpp" />
-    <ClCompile Include="..\FrameworkCommon\Blowfish.cpp" />
-    <ClCompile Include="..\FrameworkCommon\CommonSocket.cpp" />
-    <ClCompile Include="..\FrameworkCommon\Exceptions.cpp" />
-    <ClCompile Include="..\FrameworkCommon\Log.cpp" />
-    <ClCompile Include="..\FrameworkCommon\MemStream.cpp" />
-    <ClCompile Include="..\FrameworkCommon\MutexHelper.cpp" />
-    <ClCompile Include="..\FrameworkCommon\PacketUtils.cpp" />
-    <ClCompile Include="..\FrameworkCommon\Stream.cpp" />
-    <ClCompile Include="..\FrameworkCommon\TaskQueue.cpp" />
-    <ClCompile Include="ConnectionHandler.cpp" />
-    <ClCompile Include="Message.cpp" />
-    <ClCompile Include="ServerControl.cpp" />
-    <ClCompile Include="SocketServer.cpp" />
+    <ClCompile Include="SocketClient.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

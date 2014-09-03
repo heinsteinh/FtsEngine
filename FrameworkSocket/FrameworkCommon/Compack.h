@@ -23,6 +23,8 @@
 #pragma comment ( lib, "winmm.lib" )
 #pragma comment(lib,"ws2_32.lib")
 
+#pragma comment(lib,"zdll.lib")
+
 #else
 
 #include <sys/types.h>
@@ -60,3 +62,8 @@ typedef int SOCKET;
 #include <cstdint>
 
 
+# if defined (WIN32)
+typedef __int64 TimeStamp;
+# elif defined (__linux__)
+typedef __int64_t TimeStamp;
+# endif

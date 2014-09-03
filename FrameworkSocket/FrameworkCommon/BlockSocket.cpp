@@ -48,6 +48,7 @@ BlockSocket::BlockSocket()
 	m_eState = STATE_DISCONNECTED;
 
 
+
 	m_iNextmessage = 0;
 }
 
@@ -62,6 +63,7 @@ BlockSocket::~BlockSocket()
 	m_psData->m_inSocket = -1;
 
 	
+
 	delete m_psData;
 	m_psData = NULL;
 
@@ -73,6 +75,22 @@ BlockSocket::~BlockSocket()
 	Net::ShutDownRecv(m_psData->m_inSocket);
 
 }
+
+
+SOCKET BlockSocket::GetSocket()
+{
+	return m_psData->m_inSocket;
+}
+
+
+void BlockSocket::Shutdown()
+{
+	Net::ShutDownRecv(m_psData->m_inSocket);
+	Net::ShutDownSend(m_psData->m_inSocket);
+	Net::CloseSocket(m_psData->m_inSocket);	
+}
+
+
 
 bool BlockSocket::Connect(std::string p_strAddress, uint16_t p_sPort)
 {
@@ -186,10 +204,11 @@ void BlockSocket::ReadLoop()
 		if (CPacketUtils::HasPacket(m_incomingStream))
 		{
 			auto incomingPacket = CPacketUtils::ReadPacket(m_incomingStream);
-			if (incomingPacket.size() == 0)
+			if (incomingPacket.size() <= 0)
 			{
 				CLog::GetInstance().LogError(LOG_NAME, "Failed to read packet. Disconnecting.\r\n");
-				m_bRunning = false;				
+				m_bRunning = false;		
+				
 			}
 
 			m_inReadQueue.push(incomingPacket);

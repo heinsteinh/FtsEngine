@@ -74,6 +74,7 @@ std::string CStream::ReadString()
 	}
 	return result;
 }
+
 std::string CStream::ReadString(size_t length)
 {
 	if (length == 0) 
@@ -84,6 +85,7 @@ std::string CStream::ReadString(size_t length)
 	
 	return std::string(stringBuffer, stringBuffer + length);
 }
+
 
 void CStream::Write8(uint8_t nValue)
 {
@@ -98,6 +100,14 @@ void CStream::Write32(uint32_t nValue)
 {
 	Write(&nValue, 4);
 }
+
+
+void CStream::WriteString(const std::string& value)
+{
+	for (std::size_t i = 0; i < value.length(); ++i)
+		Write8(value[i]);
+}
+
 
 uint64_t CStream::GetLength()
 {

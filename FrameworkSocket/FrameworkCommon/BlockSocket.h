@@ -43,6 +43,10 @@ namespace Framework
 		std::atomic<bool>		m_bRunning;
 		int									m_iNextmessage;
 
+
+		
+
+
 	public:
 		BlockSocket();
 		~BlockSocket();
@@ -77,6 +81,10 @@ namespace Framework
 		bool SendPacket(PacketData& packet, int& iSendSize);
 		bool ReadPacket(PacketData& packet, int& iReadSize);
 
+
+
+		SOCKET GetSocket();
+		void Shutdown();
 
 	/*	int SendTCPPacket(int sock, char *buf, int size);
 		int RecvTCPPacket(int sock, PacketData& packet);

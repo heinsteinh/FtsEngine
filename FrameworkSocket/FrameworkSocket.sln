@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrameworkCommon", "Framewor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketServer", "SocketServer\SocketServer.vcxproj", "{CECD6B1B-3407-4EF1-B526-0C0227AA2519}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketClient", "SocketClient\SocketClient.vcxproj", "{A867BC65-97BD-42D5-87FB-75ACBDAD8E7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,10 @@ Global
 		{CECD6B1B-3407-4EF1-B526-0C0227AA2519}.Debug|Win32.Build.0 = Debug|Win32
 		{CECD6B1B-3407-4EF1-B526-0C0227AA2519}.Release|Win32.ActiveCfg = Release|Win32
 		{CECD6B1B-3407-4EF1-B526-0C0227AA2519}.Release|Win32.Build.0 = Release|Win32
+		{A867BC65-97BD-42D5-87FB-75ACBDAD8E7A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A867BC65-97BD-42D5-87FB-75ACBDAD8E7A}.Debug|Win32.Build.0 = Debug|Win32
+		{A867BC65-97BD-42D5-87FB-75ACBDAD8E7A}.Release|Win32.ActiveCfg = Release|Win32
+		{A867BC65-97BD-42D5-87FB-75ACBDAD8E7A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

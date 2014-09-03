@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <vector>
 
+//https://github.com/DatZach/Gmk/blob/8888f6ee028b548064553d1f98e506bcaf79bfad/src/stream.cpp
 namespace Framework
 {
 	enum STREAM_SEEK_DIRECTION
@@ -36,7 +37,7 @@ namespace Framework
 		uint64_t	Read64();
 		uint16_t	Read16_MSBF();
 		uint32_t	Read32_MSBF();
-		float		ReadFloat32();
+		float		  ReadFloat32();
 		
 		std::string	ReadString();
 		std::string	ReadString(size_t);
@@ -44,5 +45,6 @@ namespace Framework
 		void	Write8(uint8_t);
 		void	Write16(uint16_t);
 		void	Write32(uint32_t);
+		void  WriteString(const std::string& value);
 	};
 }

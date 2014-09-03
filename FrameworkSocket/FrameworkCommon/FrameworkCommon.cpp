@@ -7,6 +7,10 @@
 #include "Log.h"
 
 
+#include "Streaming.h"
+#include "CommonMessage.h"
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 
@@ -18,6 +22,26 @@ int _tmain(int argc, _TCHAR* argv[])
 		Framework::CLog::GetInstance().LogError("Temps", "Log Test");
 		Framework::CLog::GetInstance().LogDebug("Weezy", "Log Test");
 		Framework::CLog::GetInstance().LogMessage("Service", "Log Test");
+
+
+		Framework::GameCreateMessage gmeMsg;
+		gmeMsg.gridSize = 2;
+		gmeMsg.numPlayers = 3;
+		gmeMsg.timeout = 3;
+		gmeMsg.gridSize = 5;
+		gmeMsg.numPlanes = 6;
+		gmeMsg.headshots = 1;
+		gmeMsg.reveal = 1;
+		gmeMsg.gamePassword = "test";
+
+
+		Framework::GameCreateMessage gmeMsg1 = Framework::GameCreateMessage::deserialize(gmeMsg.GetStream(), 4, 3);
+
+
+
+		
+		
+
 		getchar();
 	}
 	catch (...)
