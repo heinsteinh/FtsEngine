@@ -124,7 +124,7 @@ void TaskQueue::ExecLoop()
 				TaskContainer::iterator itr = task_que_.begin();
 				TaskContainer::const_reference handlerElm = *itr;
 				Task* task = (Task*)handlerElm.handler;
-		
+				
 
 				task_que_.erase(itr);
 				lck.unlock();

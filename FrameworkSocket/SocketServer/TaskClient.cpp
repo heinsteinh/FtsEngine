@@ -157,11 +157,8 @@ void TaskSocket::Run()
 	}
 
 	}
-
-
-
+	
 	delete(this);
-
 }
 
 
@@ -185,19 +182,26 @@ void TaskSocket::HandleClientMessage(Framework::CMemStream& incomingStream)
 			return;
 		}
 
-		printf("%s", CPacketUtils::DumpPacket(incomingPacket).c_str());
+		//printf("%s", CPacketUtils::DumpPacket(incomingPacket).c_str());
 
 		unsigned int clientId = incomingPacket[0x02];
 		auto subPackets = CPacketUtils::SplitPacketSubPacket(incomingPacket);
 		for (const auto& subPacket : subPackets)
 		{
 			uint16_t commandId = CPacketUtils::GetSubPacketCommand(subPacket);
-			/*switch (commandId)
+			switch (commandId)
 			{
 
+			case 32:
+				ProcessChat(subPacket);
+				break;
+
+
+				/*
 			case ClientToServerPackageHdr::CONNECT:
 				ProcessConnectOk(subPacket);
 				break;
+
 
 			case ServerToClientPackageHdr::TOUR_INFO:
 				ProcessChat(subPacket);
@@ -214,11 +218,30 @@ void TaskSocket::HandleClientMessage(Framework::CMemStream& incomingStream)
 			case ClientToServerPackageHdr::KEEP_ALIVE:
 				ProcessKeepAlive(subPacket);
 				break;
-
-			}*/
+				*/
+			}
 		}
 	}
 }
 
 
 
+void TaskSocket::ProcessConnectOk(const Framework::PacketData&)
+{
+
+}
+
+void TaskSocket::ProcessChat(const Framework::PacketData& subPacket)
+{
+
+	const Framework::SUBPACKETHEADER header = *reinterpret_cast<const Framework::SUBPACKETHEADER*>(subPacket.data());
+	
+
+	CLog::GetInstance().LogMessage(LOG_NAME, "%d :%d :%d :%d \r\n", header.subCommandId, header.subPacketSize, header.unknown1, header.unknown2);
+
+
+	const char* chatText = reinterpret_cast<const char*>(subPacket.data() + sizeof(Framework::SUBPACKETHEADER));
+
+	//CLog::GetInstance().LogMessage(LOG_NAME, "%s", chatText);
+	
+}

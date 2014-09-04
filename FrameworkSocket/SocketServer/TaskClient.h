@@ -46,8 +46,8 @@ public:
 
 
 	void PrepareInitialPackets();
-	void ProcessConnectOk(const Framework::Message&);
-
+	void ProcessConnectOk(const Framework::PacketData&);
+	void ProcessChat(const Framework::PacketData&);
 
 	void Start();
 	void Run() override;

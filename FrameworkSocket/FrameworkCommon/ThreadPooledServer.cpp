@@ -33,6 +33,8 @@ ThreadPooledServer::~ThreadPooledServer()
 		m_pPool = NULL;
 	}
 
+	m_bIsStopped = true;
+
 	Net::UninitNetwork();
 	Net::CloseSocket(m_ServerSocket);
 }
