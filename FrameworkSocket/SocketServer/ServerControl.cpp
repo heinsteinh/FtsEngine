@@ -10,7 +10,8 @@
 #include "../FrameworkCommon/CommonMessage.h"
 
 
-#include "ConnectionHandler.h"
+#include "TaskClient.h"
+
 #include <cassert>
 #include <functional>
 
@@ -89,7 +90,7 @@ void ServerControl::ServerThreadProc()
 
 		CLog::GetInstance().LogMessage(LOG_NAME, "Accept Client : %s:%d\n", inet_ntoa(incomingAddr.sin_addr), ntohs(incomingAddr.sin_port));
 					
-		m_pConnectionHandler = new ConnectionHandler(incomingSocket, incomingAddr);
+		m_pConnectionHandler = new TaskSocket(incomingSocket, incomingAddr);
 		m_pConnectionHandler->Start();
 
 		
@@ -111,30 +112,6 @@ void ServerControl::PingPong()
 	std::chrono::minutes mins{ 1 };
 	std::chrono::seconds secs{ 5 };
 
-	while (!quit_flag)
-	{
-		std::this_thread::sleep_for(secs);
-		for (auto& client : Channel) 
-		{
-			if (!client->IsPinged()) 
-			{
-				delete client;
-				client = NULL;
-			}
-		}
-		
-		std::this_thread::sleep_for(mins);
-
-		if (!quit_flag) {
-			for (auto& client : Channel) {
-				client->SetUnPinged();
-			}
-
-			std::stringstream ping;
-			auto now = std::chrono::seconds(std::time(nullptr));
-
-#undef max /* Macros from minwindef.h */
-			pinged = std::chrono::milliseconds(now).count() % std::numeric_limits<int>::max();
 
 
 			//PingMessage pingMsg(1);
@@ -146,8 +123,8 @@ void ServerControl::PingPong()
 			//basepacket.addSubPacket(pingMsg);
 
 			//SendToAllClient(&basepacket.GetData());
-		}
-	}
+	
+	
 }
 
 

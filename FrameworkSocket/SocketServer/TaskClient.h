@@ -10,18 +10,17 @@
 #include "../FrameworkCommon/MemStream.h"
 #include "../FrameworkCommon/Compack.h"
 #include "../FrameworkCommon/PacketUtils.h"
+#include "../FrameworkCommon/ThreadBase.h"
+#include "../FrameworkCommon/TaskQueue.h"
 
 #include "Message.h"
 
 
-class ConnectionHandler
+class TaskSocket : public Framework::Task
 {
-
-
 	typedef std::deque<Framework::PacketData> PacketQueue;
 
-
-	
+		
 	SOCKET													m_pClientSocket;
 	std::shared_ptr<std::thread>		m_ConnectionThread;
 	Framework::CMemStream						m_incomingStream;
@@ -30,44 +29,36 @@ class ConnectionHandler
 
 	PacketQueue											m_packetQueue;
 
-	void														Run();
+
 	
 	bool														m_bIsPinged;
 	bool														m_bQuitFlag;
 
+	Framework::Thread*							m_KeepAliveThread;
 
 public:
-	ConnectionHandler(SOCKET pClient, sockaddr_in _clientAddress);
-	~ConnectionHandler();
-
-
-	void	QueuePacket(const Framework::Message&);
-	
+	TaskSocket(SOCKET pClient, sockaddr_in _clientAddress);
+	~TaskSocket();
+		
 
 	void HandleClientMessage(Framework::CMemStream&);
 	int RecvPacket(Framework::Message& packet);
 
 
-	void	PrepareInitialPackets();
-
-	//void	ProcessInitialHandshake(unsigned int, const Framework::PacketData&);
-	//void	ProcessKeepAlive(const Framework::PacketData&);
-	//void	ProcessChat(const Framework::PacketData&);
-
+	void PrepareInitialPackets();
 	void ProcessConnectOk(const Framework::Message&);
 
 
 	void Start();
+	void Run() override;
 	bool IsConnected();
 
 	void QueuePacket(const Framework::PacketData& packet);
+	void QueuePacket(const Framework::Message&);
 
 	
-	
-	bool IsPinged()			{ return m_bIsPinged; };
-	void SetPinged()		{ m_bIsPinged = true; };
-	void SetUnPinged()	{ m_bIsPinged = false; };
-	
+
+
 	
 };
 

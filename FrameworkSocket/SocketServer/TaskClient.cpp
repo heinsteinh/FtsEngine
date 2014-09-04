@@ -1,56 +1,98 @@
 #include "stdafx.h"
-#include "ConnectionHandler.h"
+#include "TaskClient.h"
 
 #include "../FrameworkCommon/Log.h"
+#include "../FrameworkCommon/BasePacket.h"
+
 
 
 #include <chrono>
 using namespace Framework;
 
-#define LOG_NAME "ConnectionHandler"
+#define LOG_NAME "TaskSocket"
 
 
-ConnectionHandler::ConnectionHandler(SOCKET clientSocket, sockaddr_in clientAddress) : m_pClientSocket(clientSocket), m_clientAddress(clientAddress)
+
+class KeepAliveRunner: public Framework::Runnable
 {
-	m_bDisconnect = false;
-	m_bIsPinged = false;
+	friend class ConnectionHandler;
+
+public:
+	KeepAliveRunner(TaskSocket* con) :_con(con){}
+	~KeepAliveRunner(){}
+
+	void Run() override;
+private:
+	TaskSocket* _con;
+};
+
+void KeepAliveRunner::Run()
+{
+
+#define KEEP_ALIVE_TIME_INTERVAL 10
+
+	Framework::CBasePacket basepacket;
+
+	basepacket.SetTargetId(1);
+	basepacket.SetSourceId(1);
+	basepacket.ToPacketData();
 	
+	std::chrono::seconds dura(KEEP_ALIVE_TIME_INTERVAL);
+	std::this_thread::sleep_for(dura);
+	_con->QueuePacket(basepacket.GetData());
 }
 
 
 
-ConnectionHandler::~ConnectionHandler(void)
+TaskSocket::TaskSocket(SOCKET clientSocket, sockaddr_in clientAddress) : m_pClientSocket(clientSocket), m_clientAddress(clientAddress)
+{
+	m_bDisconnect = false;
+	m_bIsPinged = false;		
+	
+	m_KeepAliveThread = new Framework::Thread(new KeepAliveRunner(this));
+
+}
+
+
+
+TaskSocket::~TaskSocket(void)
 {
 	closesocket(m_pClientSocket);
 
 
-	if (m_ConnectionThread->joinable())
+	if (m_ConnectionThread && m_ConnectionThread->joinable())
 		m_ConnectionThread->join();
+
+
+	if (m_KeepAliveThread)
+	{
+		delete m_KeepAliveThread;
+		m_KeepAliveThread = NULL;
+	}
 
 	
 	m_bIsPinged = false;
-
 	CLog::GetInstance().LogMessage(LOG_NAME, "Disconnecting Client : %s:%d\n", inet_ntoa(m_clientAddress.sin_addr), ntohs(m_clientAddress.sin_port));
 }
 
 
-void ConnectionHandler::Start()
+void TaskSocket::Start()
 {
 
 	u_long notBlockingMode = 0;
 	ioctlsocket(m_pClientSocket, FIONBIO, &notBlockingMode);
 
 	m_bDisconnect = false;
-	m_ConnectionThread = std::shared_ptr<std::thread>(new std::thread(std::bind(&ConnectionHandler::Run, this)));
+	m_ConnectionThread = std::shared_ptr<std::thread>(new std::thread(std::bind(&TaskSocket::Run, this)));
 	m_ConnectionThread->detach();
 }
 
 
 
-bool ConnectionHandler::IsConnected() { return m_bDisconnect; }
+bool TaskSocket::IsConnected() { return m_bDisconnect; }
 
 
-void ConnectionHandler::Run()
+void TaskSocket::Run()
 {
 
 	char *addr;
@@ -103,6 +145,12 @@ void ConnectionHandler::Run()
 			m_incomingStream.Write(incomingPacket, read);
 		}
 
+		if (read < 0)
+		{
+			CLog::GetInstance().LogMessage(LOG_NAME, "Client disconnected.");
+			m_bDisconnect = true;
+
+		}
 
 		HandleClientMessage(m_incomingStream);
 		std::this_thread::sleep_for(std::chrono::milliseconds(16));
@@ -110,20 +158,22 @@ void ConnectionHandler::Run()
 
 	}
 
+
+
 	delete(this);
 
 }
 
 
 
-void ConnectionHandler::QueuePacket(const PacketData& packet)
+void TaskSocket::QueuePacket(const PacketData& packet)
 {
 	m_packetQueue.push_back(packet);
 }
 
 
 
-void ConnectionHandler::HandleClientMessage(Framework::CMemStream& incomingStream)
+void TaskSocket::HandleClientMessage(Framework::CMemStream& incomingStream)
 {
 
 	if (CPacketUtils::HasPacket(incomingStream))
@@ -169,3 +219,6 @@ void ConnectionHandler::HandleClientMessage(Framework::CMemStream& incomingStrea
 		}
 	}
 }
+
+
+

@@ -103,7 +103,10 @@
     <ClInclude Include="StringFormat.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TaskQueue.h" />
+    <ClInclude Include="ThreadBase.h" />
+    <ClInclude Include="ThreadPooledServer.h" />
     <ClInclude Include="TSingleton.h" />
+    <ClInclude Include="WorkItemQueue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BasePacket.cpp" />
@@ -126,6 +129,9 @@
     <ClCompile Include="Stream.cpp" />
     <ClCompile Include="Streaming.cpp" />
     <ClCompile Include="TaskQueue.cpp" />
+    <ClCompile Include="ThreadBase.cpp" />
+    <ClCompile Include="ThreadPooledServer.cpp" />
+    <ClCompile Include="WorkItemQueue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

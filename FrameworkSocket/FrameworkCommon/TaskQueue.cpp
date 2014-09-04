@@ -3,25 +3,26 @@
 
 
 
+using namespace Framework;
+
 TaskQueue::TaskQueue()
 : stop_(true)
 , pause_(false)
 , runing_threads_count_(0)
 {
 }
+
 TaskQueue::~TaskQueue()
 {
 	Stop();
 }
+
+
 void TaskQueue::Start(int thread_cnt)
 {
 	try
-	{
-		//boost::this_thread::disable_interruption di;
-
+	{	
 		scoped_lock scoped_lock_(start_stop_mutex_);
-		//boost::mutex::scoped_lock lck(start_stop_mutex_);
-
 
 		if (!stop_)
 			return;
@@ -47,7 +48,6 @@ void TaskQueue::Stop()
 {
 	try
 	{
-
 		scoped_lock lck(start_stop_mutex_);
 
 		if (stop_)
@@ -56,6 +56,7 @@ void TaskQueue::Stop()
 		stop_ = true;
 		pause_ = false;
 		condition_.notify_all();
+
 		for (size_t i = 0; i<threads_.size(); ++i)
 		{
 			std::thread* threadPtr = threads_[i];
@@ -64,7 +65,9 @@ void TaskQueue::Stop()
 				threadPtr->join();
 			}
 			delete threadPtr;
+			threadPtr = NULL;
 		}
+
 		threads_.clear();
 		task_que_.clear();
 		runing_threads_count_ = 0;
@@ -77,7 +80,6 @@ void TaskQueue::Stop()
 
 void TaskQueue::Reset()
 {
-	//boost::mutex::scoped_lock lck(work_mutex_);
 	scoped_lock lck(work_mutex_);
 	task_que_.clear();
 }
@@ -93,12 +95,9 @@ void TaskQueue::Resume()
 	condition_.notify_one();
 }
 
-void TaskQueue::Post(const TaskFunction& h, int priority)
+void TaskQueue::Post(const Task* h, int priority)
 {
 	{
-
-		
-		//boost::mutex::scoped_lock lck(work_mutex_);
 		scoped_lock lck(work_mutex_);
 		task_que_.insert(HandlerElm(h, priority));
 	}
@@ -109,8 +108,7 @@ void TaskQueue::Post(const TaskFunction& h, int priority)
 void TaskQueue::ExecLoop()
 {
 	try
-	{
-		//boost::this_thread::disable_interruption di;
+	{		
 		++runing_threads_count_;
 		for (; !stop_;)
 		{
@@ -125,14 +123,14 @@ void TaskQueue::ExecLoop()
 			{
 				TaskContainer::iterator itr = task_que_.begin();
 				TaskContainer::const_reference handlerElm = *itr;
-				TaskFunction h = handlerElm.handler;
+				Task* task = (Task*)handlerElm.handler;
 		
 
 				task_que_.erase(itr);
 				lck.unlock();
 				try
 				{
-					h();
+					task->Run();
 				}
 				catch (...)
 				{

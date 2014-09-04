@@ -4,13 +4,21 @@
 #include "stdafx.h"
 
 
+#include "MyServer.h"
+#include "../FrameworkCommon/ThreadBase.h"
+#include "../FrameworkCommon/Log.h"
+
 #include "ServerControl.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 
-	ServerControl server("127.0.0.1", 55555);
-	server.Start();
+	Framework::CLog::GetInstance().startLog("Srv", "AppDir");
+
+	std::shared_ptr<MyServer> server(new MyServer("127.0.0.1", 55555));
+	Framework::Thread ServerThread(server.get());
+	
+
 
 	return 0;
 }

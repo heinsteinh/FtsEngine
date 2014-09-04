@@ -45,9 +45,6 @@
     <ClInclude Include="..\FrameworkCommon\Compack.h">
       <Filter>Header Files\LibHeader</Filter>
     </ClInclude>
-    <ClInclude Include="ConnectionHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\FrameworkCommon\StringFormat.h">
       <Filter>Header Files\LibHeader</Filter>
     </ClInclude>
@@ -76,6 +73,21 @@
       <Filter>Header Files\LibHeader</Filter>
     </ClInclude>
     <ClInclude Include="..\FrameworkCommon\BasePacket.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="MyServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\ThreadPooledServer.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\ThreadBase.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameworkCommon\TaskSocket.h">
+      <Filter>Header Files\LibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,16 +128,25 @@
     <ClCompile Include="..\FrameworkCommon\PacketUtils.cpp">
       <Filter>Source Files\LibSource</Filter>
     </ClCompile>
-    <ClCompile Include="ConnectionHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\FrameworkCommon\MutexHelper.cpp">
       <Filter>Source Files\LibSource</Filter>
     </ClCompile>
     <ClCompile Include="..\FrameworkCommon\BlockSocket.cpp">
       <Filter>Source Files\LibSource</Filter>
     </ClCompile>
+    <ClCompile Include="MyServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\ThreadBase.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameworkCommon\ThreadPooledServer.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
     <ClCompile Include="..\FrameworkCommon\BasePacket.cpp">
+      <Filter>Source Files\LibSource</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

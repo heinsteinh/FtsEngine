@@ -26,7 +26,6 @@
 
 
 
-
 namespace Framework
 {
 	class BlockSocket;
@@ -62,8 +61,8 @@ namespace Framework
 //};
 
 
-class ConnectionHandler;
-class ServerControl
+class TaskSocket;
+class ServerControl 
 {
 public:
 	ServerControl(std::string address, int port);
@@ -87,8 +86,8 @@ private:
 private: /* fields: */
 	//PasswordManager password_manager;
 
-	ConnectionHandler*										m_pConnectionHandler;
-	std::vector<ConnectionHandler*>				Channel;
+	TaskSocket*								  		m_pConnectionHandler;
+	std::vector<TaskSocket*>				Channel;
 	
 	//EventsHandle<Event> events_handle;
 	//ServerSocket server_socket;
