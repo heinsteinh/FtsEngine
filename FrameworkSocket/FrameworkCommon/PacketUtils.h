@@ -18,6 +18,17 @@ namespace Framework
 
 #define PACKET_HEADER_SIZE sizeof(PACKETHEADER)
 
+
+	struct SubHeaderProtocol
+	{
+		uint16_t subSessionId;
+		uint16_t subCount_;
+		uint16_t subIndex_;
+		uint16_t subSize_;
+		uint32_t subUnknown0;
+		uint32_t subUnknown1;
+	};
+
 	struct SUBPACKETHEADER
 	{
 		uint16_t subPacketSize;
@@ -27,7 +38,9 @@ namespace Framework
 		uint32_t unknown3;
 	};
 
-	static_assert(sizeof(SUBPACKETHEADER) == 0x10, "Packet header size must be 16 bytes.");
+	static_assert(sizeof(SUBPACKETHEADER) == 0x10, "sub Packet header size must be 16 bytes.");
+	static_assert(sizeof(SubHeaderProtocol) == 0x10, "sub Packet header size must be 16 bytes.");
+	
 
 #define PACKET_SUBHEADER_SIZE sizeof(SUBPACKETHEADER)
 

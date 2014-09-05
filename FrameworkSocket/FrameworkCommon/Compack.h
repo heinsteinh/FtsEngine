@@ -57,6 +57,8 @@ typedef int SOCKET;
 #include <set>
 #include <algorithm>
 #include <functional>
+#include <memory>
+#include <vector>
 
 #include <cassert>
 #include <cstdint>

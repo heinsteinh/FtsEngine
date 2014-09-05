@@ -15,13 +15,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	Framework::CLog::GetInstance().startLog("Srv", "AppDir");
 
-	std::shared_ptr<MyServer> server(new MyServer("127.0.0.1", 55555));
+	std::shared_ptr<MyServer> server(new MyServer("127.0.0.1", 55555, 20));
 	Framework::Thread ServerThread(server.get());
-	//Framework::Thread* ServerThread= new Framework::Thread(server.get());
-
-
-	std::this_thread::sleep_for(std::chrono::seconds(15));
-
 
 	return 0;
 }

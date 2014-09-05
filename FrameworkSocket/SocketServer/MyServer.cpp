@@ -11,7 +11,7 @@ using namespace Framework;
 
 #define LOG_NAME "MyServer"
 
-MyServer::MyServer(const std::string& address, const int port):Framework::ThreadPooledServer(address, port)
+MyServer::MyServer(const std::string& address, const int port, int iThreadCount) :Framework::ThreadPooledServer(address, port, iThreadCount)
 {
 
 }
@@ -41,6 +41,7 @@ void MyServer::Run()
 			CLog::GetInstance().LogMessage(LOG_NAME, "Accept Client : %s:%d\n", inet_ntoa(incomingAddr.sin_addr), ntohs(incomingAddr.sin_port));
 
 			pTaskSocket = (new TaskSocket(incomingSocket, incomingAddr)); // will be automaitcall delete when done
+			
 			m_pPool->Post(pTaskSocket);
 
 		}

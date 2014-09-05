@@ -10,12 +10,12 @@ using namespace Framework;
 #define LOG_NAME "ThreadPooledServer"
 
 
-ThreadPooledServer::ThreadPooledServer(const std::string& address, const int port) :m_iServerPort(port)
+ThreadPooledServer::ThreadPooledServer(const std::string& address, const int port, int iThreadCount) :m_iServerPort(port), m_iThreadCount(iThreadCount)
 {
 	Net::InitNetwork();
 	
 	m_pPool = new TaskQueue;
-	m_pPool->Start();
+	m_pPool->Start(m_iThreadCount);
 
 
 

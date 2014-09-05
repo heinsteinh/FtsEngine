@@ -101,6 +101,7 @@
     <ClInclude Include="Stream.h" />
     <ClInclude Include="Streaming.h" />
     <ClInclude Include="StringFormat.h" />
+    <ClInclude Include="Subpacket.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TaskQueue.h" />
     <ClInclude Include="ThreadBase.h" />
@@ -128,6 +129,7 @@
     </ClCompile>
     <ClCompile Include="Stream.cpp" />
     <ClCompile Include="Streaming.cpp" />
+    <ClCompile Include="Subpacket.cpp" />
     <ClCompile Include="TaskQueue.cpp" />
     <ClCompile Include="ThreadBase.cpp" />
     <ClCompile Include="ThreadPooledServer.cpp" />
