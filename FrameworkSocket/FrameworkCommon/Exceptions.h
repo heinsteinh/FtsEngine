@@ -9,8 +9,10 @@ namespace Framework
 	public:
 		SocketException(const std::string& msg);
 		SocketException(const std::string& msg, int errorCode);
-		inline virtual const char* what() const override { return msg.c_str(); }
+//		inline virtual const char* what() const override { return msg.c_str(); }
 		const int errorCode = 0;
+    
+
 	private:
 		std::string msg;
 		inline SocketException& operator=(const SocketException&);

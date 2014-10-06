@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 
 
 #ifdef little_endian /* Eg: Intel */

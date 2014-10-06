@@ -6,7 +6,7 @@
 #include <deque>
 
 
-#include "../FrameworkCommon/CommonMessage.h"
+
 #include "../FrameworkCommon/MemStream.h"
 #include "../FrameworkCommon/Compack.h"
 #include "../FrameworkCommon/PacketUtils.h"
@@ -42,7 +42,7 @@ public:
 		
 
 	void HandleClientMessage(Framework::CMemStream&);
-	int RecvPacket(Framework::Message& packet);
+	//int RecvPacket(Framework::Message& packet);
 
 
 	void PrepareInitialPackets();
@@ -54,7 +54,7 @@ public:
 	bool IsConnected();
 
 	void QueuePacket(const Framework::PacketData& packet);
-	void QueuePacket(const Framework::Message&);
+	//void QueuePacket(const Framework::Message&);
 
 	
 

@@ -6,6 +6,7 @@
 #include <vector>
 
 
+#include <Compack.h>
 #include "../FrameworkCommon/PacketUtils.h"
 
 

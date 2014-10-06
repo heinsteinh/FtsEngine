@@ -20,7 +20,7 @@ namespace Framework
 		void	LogError(const char*, const char*, ...);
 		void	LogWarnning(const char*, const char*, ...);
 
-		bool startLog(std::string strPrefix, std::string strLogDir = "");
+		bool startLog(std::string strPrefix, std::string strLogDir );
 		bool closeLog();
 		
 

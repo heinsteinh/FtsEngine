@@ -10,7 +10,7 @@
 
 #include "ServerControl.h"
 
-int _tmain(int argc, _TCHAR* argv[])
+int _tmain(int argc, CHAR* argv[])
 {
 
 	Framework::CLog::GetInstance().startLog("Srv", "AppDir");

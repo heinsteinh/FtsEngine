@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "PacketUtils.h"
 #include "Log.h"
 #include "Blowfish.h"
@@ -60,7 +60,7 @@ namespace Framework
 
 	SubPacketArray CPacketUtils::SplitPacketSubPacket(const PacketData& packet)
 	{
-		printf("%s", CPacketUtils::DumpPacket(packet));
+		printf("%s", CPacketUtils::DumpPacket(packet).c_str());
 
 		SubPacketArray subPackets;
 		if (packet.size() < sizeof(PACKETHEADER))

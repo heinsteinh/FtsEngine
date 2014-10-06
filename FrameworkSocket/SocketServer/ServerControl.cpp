@@ -7,7 +7,7 @@
 #include "../FrameworkCommon/CommonSocket.h"
 #include "../FrameworkCommon/BlockSocket.h"
 #include "../FrameworkCommon/Exceptions.h"
-#include "../FrameworkCommon/CommonMessage.h"
+
 
 
 #include "TaskClient.h"

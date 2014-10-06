@@ -10,15 +10,18 @@
 
 #define MAX_PATH_LEN 256
 
-namespace Framework
+
+namespace CommonFunc
 {
-	UINT32	GetProcessorNum();
+	uint32_t	GetProcessorNum();
 	std::string	GetCurrentDir();
-	BOOL	CreateDir(std::string &strDir);
-	UINT32	GetTime();
-	UINT32	GetTickCount();
-	UINT64	GetTickCount64();
-	UINT32	GetCurThreadID();
-	UINT32	GetFreePhysMemory();
+    
+	bool		CreateDir(std::string &strDir);
+	
+	uint32_t	GetTime();
+	uint32_t	GetTickCount();
+	uint64_t	GetTickCount64();
+	uint32_t	GetCurThreadID();
+	uint32_t	GetFreePhysMemory();
 }
 #endif /* __COMMON_FUNCTION__*/

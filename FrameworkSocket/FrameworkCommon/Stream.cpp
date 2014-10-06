@@ -1,8 +1,8 @@
-#include "stdafx.h"
+
 #include "Stream.h"
+#include <string>
 
-
-//#include "alloca_def.h"
+#include <alloca.h>
 
 using namespace Framework;
 
@@ -62,6 +62,7 @@ float CStream::ReadFloat32()
 	Read(&value, sizeof(float));
 	return value;
 }
+
 std::string CStream::ReadString()
 {
 	std::string result;
@@ -74,6 +75,7 @@ std::string CStream::ReadString()
 	}
 	return result;
 }
+
 
 std::string CStream::ReadString(size_t length)
 {

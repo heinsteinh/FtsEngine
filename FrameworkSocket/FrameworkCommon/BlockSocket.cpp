@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "BlockSocket.h"
 #include "Log.h"
 
@@ -360,7 +360,7 @@ bool BlockSocket::SendPacket(PacketData& packet, int& iSendSize)
 		send_size = ::send(m_psData->m_inSocket, (char *)packet.data() + offset, size, 0);
 		if (send_size == -1)
 		{
-			CLog::GetInstance().LogError(LOG_NAME, "Send error WSAGetLastError = %d\n", WSAGetLastError());			
+			//CLog::GetInstance().LogError(LOG_NAME, "Send error WSAGetLastError = %d\n", WSAGetLastError());
 			success = false;
 			iSendSize = -1;
 			return success;
@@ -406,13 +406,13 @@ bool BlockSocket::ReadPacket(PacketData& packet, int& iReadSize)
 	do {
 		if ((bytesreceived = Net::Recv(m_psData->m_inSocket, (char*)bufferHeader.data() + curr, (PACKET_HEADER_SIZE)-curr)) == SOCKET_ERROR)
 		{
-			CLog::GetInstance().LogError(LOG_NAME, "Receive error WSAGetLastError = %d ", WSAGetLastError());
+			//CLog::GetInstance().LogError(LOG_NAME, "Receive error WSAGetLastError = %d ", WSAGetLastError());
 			success = false;
 			return success;
 		}
 
 		if (bytesreceived == 0) {
-			CLog::GetInstance().LogError(LOG_NAME, "Socket Close = %d", WSAGetLastError());
+		//	CLog::GetInstance().LogError(LOG_NAME, "Socket Close = %d", WSAGetLastError());
 			success = false;
 			
 			Net::CloseSocket(m_psData->m_inSocket);
@@ -437,7 +437,7 @@ bool BlockSocket::ReadPacket(PacketData& packet, int& iReadSize)
 	curr = 0;
 	do {
 		if ((bytesreceived = Net::Recv(m_psData->m_inSocket, (char*)bufferData.data() + curr, (header.packetSize - PACKET_HEADER_SIZE) - curr)) == SOCKET_ERROR) {
-			CLog::GetInstance().LogError(LOG_NAME, "E_SOCKET_RECEIVE_FAILED %d", WSAGetLastError);
+			//CLog::GetInstance().LogError(LOG_NAME, "E_SOCKET_RECEIVE_FAILED %d", WSAGetLastError);
 			success = false;
 			return success;
 		}

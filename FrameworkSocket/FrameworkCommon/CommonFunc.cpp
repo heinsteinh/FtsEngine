@@ -1,12 +1,15 @@
-#include "stdafx.h"
+
 #include "CommonFunc.h"
 
 
+#define  MAX_PATH_LEN 256
 
-UINT32 Framework::GetProcessorNum()
+#include <thread>
+
+uint32_t CommonFunc::GetProcessorNum()
 {
-	UINT32 dwNum = 0;
-#ifdef WIN32
+	uint32_t dwNum = 0;
+#ifdef _WIN64
 	SYSTEM_INFO sysInfo;
 	GetSystemInfo(&sysInfo);
 	dwNum = sysInfo.dwNumberOfProcessors * 2;
@@ -15,42 +18,52 @@ UINT32 Framework::GetProcessorNum()
 #endif
 	return dwNum;
 }
-std::string Framework::GetCurrentDir()
+
+
+std::string CommonFunc::GetCurrentDir()
 {
 	char szPath[MAX_PATH_LEN];
-#ifdef WIN32
+#ifdef _WIN64
 	_getcwd(szPath, MAX_PATH_LEN);
 #else
 	getcwd(szPath, MAX_PATH_LEN);
 #endif
 	return std::string(szPath);
 }
-UINT32 Framework::GetTime()
+
+
+uint32_t CommonFunc::GetTime()
 {
 	time_t t;
 	t = time(0);
-	return (UINT32)t;
+	return (uint32_t)t;
 }
-UINT32 Framework::GetTickCount()
+
+uint32_t CommonFunc::GetTickCount()
 {
-#ifdef WIN32
-	return ::GetTickCount();
+    uint32_t dwTickCount = 0;;
+    
+#ifdef _WIN64
+	dwTickCount = ::GetTickCount();
+    
 #else
-	UINT32 dwTickCount = 0;;
-	struct timespec on;
-	if (0 == clock_gettime(CLOCK_MONOTONIC, &on))
-	{
-		dwTickCount = on.tv_sec * 1000 + on.tv_nsec / 1000000;
-	}
-	return dwTickCount;
+    /*
+     struct timespec on;
+     if (0 == clock_gettime(CLOCK_MONOTONIC, &on))
+     {
+     dwTickCount = on.tv_sec * 1000 + on.tv_nsec / 1000000;
+     }*/
 #endif
+    return dwTickCount;
 }
-UINT64 Framework::GetTickCount64()
+
+uint64_t CommonFunc::GetTickCount64()
 {
 #if WINVER < 0x0501
 	return GetTickCount();
 #else
-#ifdef WIN32
+    
+#ifdef _WIN64
 	return ::GetTickCount64();
 #else
 	UINT64 dwTickCount = 0;;
@@ -61,50 +74,64 @@ UINT64 Framework::GetTickCount64()
 	}
 	return dwTickCount;
 #endif
+    
 #endif
 }
-BOOL Framework::CreateDir(std::string &strDir)
+
+
+bool CommonFunc::CreateDir(std::string &strDir)
 {
 	int nRet = 0;
-#ifdef WIN32
+#ifdef _WIN64
 	nRet = _mkdir(strDir.c_str());
 #else
 	nRet = mkdir(strDir.c_str(), S_IRWXU);
 #endif
 	if (nRet == 0)
 	{
-		return TRUE;
+		return true;
 	}
 	if (errno == EEXIST)
 	{
-		return TRUE;
+		return true;
 	}
-	return FALSE;
+	return false;
 }
-UINT32 Framework::GetCurThreadID()
+
+uint32_t CommonFunc::GetCurThreadID()
 {
-	UINT32 dwThreadID = 0;
-#ifdef WIN32
+	uint32_t dwThreadID = 0;
+#ifdef _WIN64
 	dwThreadID = ::GetCurrentThreadId();
 #else
-	dwThreadID = (UINT32)pthread_self();
+    
+    //    static_assert(sizeof(std::thread::id)==sizeof(uint64_t),"this function only works if size of thead::id is equal to the size of uint_64");
+    //    auto id=std::this_thread::get_id();
+    //    uint64_t* ptr=(uint64_t*) &id;
+    //    dwThreadID = (*ptr);
+    
+    
+	//dwThreadID = (uint32_t)std::this_thread::get_id().hash(); //(UINT32)pthread_self();
 #endif
 	return dwThreadID;
 }
-UINT32 Framework::GetFreePhysMemory()
+
+
+uint32_t CommonFunc::GetFreePhysMemory()
 {
-	UINT32 dwFreeSize = 0;
-#ifdef WIN32
+	uint32_t dwFreeSize = 0;
+#ifdef _WIN64
 	MEMORYSTATUSEX statex;
 	statex.dwLength = sizeof (statex);
 	GlobalMemoryStatusEx(&statex);
-	dwFreeSize = (UINT32)(statex.ullAvailPhys / 1024 / 1024);
+	dwFreeSize = (uint32_t)(statex.ullAvailPhys / 1024 / 1024);
 #else
-	UINT32 dwPageSize;
-	UINT32 dwFreePages;
+	uint32_t dwPageSize;
+	uint32_t dwFreePages = 0;
 	dwPageSize = sysconf(_SC_PAGESIZE) / 1024;
-	dwFreePages = sysconf(_SC_AVPHYS_PAGES) / 1024;
+	//dwFreePages = sysconf(_SC_AVPHYS_PAGES) / 1024;
 	dwFreeSize = dwFreePages * dwPageSize;
 #endif
+    
 	return dwFreeSize;
 }

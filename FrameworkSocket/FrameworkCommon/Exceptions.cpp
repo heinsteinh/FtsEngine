@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "Exceptions.h"
 #include "CommonSocket.h"
 #include "Log.h"

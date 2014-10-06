@@ -57,7 +57,9 @@ TaskSocket::TaskSocket(SOCKET clientSocket, sockaddr_in clientAddress) : m_pClie
 
 TaskSocket::~TaskSocket(void)
 {
-	closesocket(m_pClientSocket);
+
+
+	//Closesocket(m_pClientSocket);
 
 
 	if (m_ConnectionThread && m_ConnectionThread->joinable())
@@ -80,7 +82,7 @@ void TaskSocket::Start()
 {
 
 	u_long notBlockingMode = 0;
-	ioctlsocket(m_pClientSocket, FIONBIO, &notBlockingMode);
+	//ioctlsocket(m_pClientSocket, FIONBIO, &notBlockingMode);
 
 	m_bDisconnect = false;
 	m_ConnectionThread = std::shared_ptr<std::thread>(new std::thread(std::bind(&TaskSocket::Run, this)));

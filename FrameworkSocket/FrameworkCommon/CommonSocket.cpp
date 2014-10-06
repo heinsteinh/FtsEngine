@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "CommonSocket.h"
 #include "Log.h"
 
@@ -169,9 +169,9 @@ bool Net::SetSocketKeepAlive(SOCKET hSocket, int keepInterval, int keepCount, in
 	setsockopt(hSocket, SOL_SOCKET, SO_KEEPALIVE, (char*)&bKeepAlive, sizeof(bKeepAlive));
 #else
 
-	setsockopt(hSocket, SOL_TCP, TCP_KEEPIDLE, (void *)&keepIdle, sizeof(keepIdle));
-	setsockopt(hSocket, SOL_TCP, TCP_KEEPINTVL, (void *)&keepInterval, sizeof(keepInterval));
-	setsockopt(hSocket, SOL_TCP, TCP_KEEPCNT, (void *)&keepCount, sizeof(keepCount));
+//	setsockopt(hSocket, SOL_TCP, TCP_KEEPIDLE, (void *)&keepIdle, sizeof(keepIdle));
+//	setsockopt(hSocket, SOL_TCP, TCP_KEEPINTVL, (void *)&keepInterval, sizeof(keepInterval));
+//	setsockopt(hSocket, SOL_TCP, TCP_KEEPCNT, (void *)&keepCount, sizeof(keepCount));
 #endif
 
 	return true;

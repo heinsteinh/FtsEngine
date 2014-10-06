@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "ThreadPooledServer.h"
 #include "CommonSocket.h"
 #include "Log.h"

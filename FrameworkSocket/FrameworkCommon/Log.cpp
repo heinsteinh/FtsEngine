@@ -1,10 +1,14 @@
-#include "stdafx.h"
+
 #include "Log.h"
 
 
 #include "Log.h"
 #include "StringFormat.h"
 #include "Compack.h"
+
+
+#define TRUE 1
+#define FALSE 0
 
 using namespace Framework;
 
@@ -78,7 +82,7 @@ bool CLog::closeLog()
 
 	if (m_pLogFile == NULL)
 	{
-		return FALSE;
+		return false;
 	}
 
 	fflush(m_pLogFile);
