@@ -1,3 +1,6 @@
+#!/bin/sh
+
+
 
 
 # For benefit of log files.
@@ -22,35 +25,23 @@ mkdir -p build/build.android
 
 
 cd build
-cd build.macosx
-
-#cmake -GXcode ../../  -DCMAKE_BUILD_TYPE=RelWithDebInfo
-cmake -GXcode ../../  -DCMAKE_BUILD_TYPE=Debug
-
-xcodebuild -list
-
-#make
-#xcodebuild -list
+cd build.unix
 
 
+cmake -G"Unix Makefiles" ../../ -DCMAKE_BUILD_TYPE=Debug
 
-xcodebuild  -configuration Debug
-
-
+make
 
 cd ../../
 
 cd bin
 
-cd macos
-
-cd Debug
+cd unix
 
 
+echo ' '
 echo 'Executing the Debug'
+echo ' '
 
 
 ./ProjectBuilder
-
-
-#open ProjectBuilder.xcodeproj

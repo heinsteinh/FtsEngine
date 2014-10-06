@@ -1,3 +1,3 @@
 git add *
 git commit -m "All"
-git push
+git push -f
